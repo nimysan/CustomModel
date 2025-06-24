@@ -17,7 +17,8 @@ nova-fine-tunning/
 │   ├── visualize_detailed_metrics.py   # 生成详细训练指标图表的脚本
 │   ├── nova_ft_dataset_validator.py    # 验证训练数据格式的脚本
 │   ├── validate_training_dataset.py    # 验证训练数据集的脚本
-│   └── run_data_preparation.sh         # 运行数据准备过程的Shell脚本
+│   ├── run_data_preparation.sh         # 运行数据准备过程的Shell脚本
+│   └── run_complete_pipeline.sh        # 执行完整数据处理流水线的Shell脚本
 │
 ├── data/                               # 数据目录
 │   └── invoice_sellers.csv             # 包含图像名称和销售方信息的CSV文件
@@ -57,25 +58,48 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
    aws configure
    ```
 
-2. Make the shell script executable:
+2. Make the shell scripts executable:
    ```
-   chmod +x scripts/run_nova_preparation.sh
+   chmod +x scripts/run_data_preparation.sh
+   chmod +x scripts/run_complete_pipeline.sh
    ```
 
 ## Usage
 
-### Step 1: Prepare Training Data
+### 方法1: 使用完整流水线（推荐）
 
-Run the preparation script:
+运行完整的数据处理流水线：
 ```
-./scripts/run_nova_preparation.sh
+./scripts/run_complete_pipeline.sh
 ```
 
-The script will:
-- Read the CSV file with image names and seller information
-- Upload images to S3 bucket `aigcdemo.plaza.red` under the prefix `nova-fine-tunning/invoices/chinese/`
-- Create training JSON files in the output directory
-- Log the process in `output/logs/nova_data_preparation.log`
+如果需要包含LLM标注生成步骤：
+```
+./scripts/run_complete_pipeline.sh --generate-labels
+```
+
+完整流水线将执行以下步骤：
+1. (可选) 使用LLM生成CSV标注数据
+2. 处理图像并创建训练数据
+3. 验证训练数据格式
+4. 上传JSONL到S3
+
+详细使用说明请参考 [流水线使用指南](./docs/pipeline_usage.md)。
+
+### 方法2: 单独执行各步骤
+
+#### Step 1: 准备训练数据
+
+运行准备脚本：
+```
+./scripts/run_data_preparation.sh
+```
+
+该脚本将：
+- 读取CSV文件中的图像名称和销售方信息
+- 将图像上传到S3存储桶 `aigcdemo.plaza.red` 的 `nova-fine-tunning/invoices/chinese/` 前缀下
+- 在输出目录中创建训练JSON文件
+- 将处理过程记录在 `output/logs/nova_data_preparation.log`
 
 ### Step 2: Upload Training JSON Files to S3
 

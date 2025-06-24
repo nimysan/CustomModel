@@ -2,6 +2,27 @@
 
 This document provides detailed information about the scripts used in the Nova fine-tuning project.
 
+## run_complete_pipeline.sh
+
+Shell script that executes the complete data processing pipeline from LLM labeling to S3 upload.
+
+### Usage
+
+```bash
+./scripts/run_complete_pipeline.sh [options]
+```
+
+### Options
+
+- `--generate-labels`, `-g`: Include the LLM label generation step (optional)
+
+### Process Flow
+
+1. (Optional) Generate CSV labels using LLM
+2. Process images and create training data
+3. Validate training data format
+4. Upload JSONL to S3
+
 ## process_images_for_training.py
 
 Processes invoice images and creates training data in the format required by Amazon Bedrock Nova.
@@ -124,7 +145,7 @@ python3 scripts/validate_training_dataset.py [options]
 
 ## run_data_preparation.sh
 
-Shell script to run the complete data preparation process.
+Shell script to run the data preparation process.
 
 ### Usage
 
