@@ -11,7 +11,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("upload_training_data.log"),
+        logging.FileHandler("../output/logs/upload_training_data.log"),
         logging.StreamHandler()
     ]
 )
@@ -21,7 +21,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Upload training data to S3 for Nova fine-tuning')
     
     parser.add_argument('--input-dir', type=str, 
-                        default="/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output",
+                        default="../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output",
                         help='Directory containing training files')
     
     parser.add_argument('--s3-bucket', type=str, 

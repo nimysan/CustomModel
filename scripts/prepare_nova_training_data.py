@@ -11,18 +11,18 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("nova_data_preparation.log"),
+        logging.FileHandler("../output/logs/nova_data_preparation.log"),
         logging.StreamHandler()
     ]
 )
 
 # Configuration
-CSV_PATH = "/Users/yexw/PycharmProjects/nova-fine-tunning/invoice_sellers.csv"
-IMAGES_DIR = "/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/dataset/images/vat_train"
+CSV_PATH = "../data/invoice_sellers.csv"
+IMAGES_DIR = "../InvoiceDatasets/dataset/images/vat_train"
 S3_BUCKET = "aigcdemo.plaza.red"
 S3_PREFIX = "nova-fine-tunning/invoices/chinese"
 ACCOUNT_ID = "390468416359"
-OUTPUT_DIR = "/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output"
+OUTPUT_DIR = "../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output"
 OUTPUT_JSONL = os.path.join(OUTPUT_DIR, "training_data.jsonl")
 
 # Create output directory if it doesn't exist

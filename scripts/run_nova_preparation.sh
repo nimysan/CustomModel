@@ -16,10 +16,10 @@ python3 prepare_nova_training_data.py
 # Check if the script ran successfully
 if [ $? -eq 0 ]; then
   echo "Data preparation completed successfully."
-  echo "Training JSONL file is in: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl"
+  echo "Training JSONL file is in: ../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl"
   
   # Check if the JSONL file exists and count the number of lines
-  JSONL_FILE="/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl"
+  JSONL_FILE="../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl"
   if [ -f "$JSONL_FILE" ]; then
     LINE_COUNT=$(wc -l < "$JSONL_FILE")
     echo "Created JSONL file with $LINE_COUNT training examples."

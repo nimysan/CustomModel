@@ -4,15 +4,41 @@ This project prepares training data for fine-tuning Amazon Bedrock Nova models t
 
 ## Project Structure
 
-- `prepare_nova_training_data.py`: Python script to process images and create training data
-- `upload_training_data.py`: Python script to upload training JSON files to S3
-- `create_nova_finetuning_job.py`: Python script to create and manage fine-tuning jobs
-- `run_nova_preparation.sh`: Shell script to run the data preparation process
-- `invoice_sellers.csv`: CSV file containing image names and seller information
-- `InvoiceDatasets/dataset/images/vat_train/`: Directory containing invoice images
-- `InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/`: Output directory for training JSON files
+```
+nova-fine-tunning/
+│
+├── README.md                           # 项目说明文档
+│
+├── scripts/                            # 脚本文件目录
+│   ├── prepare_nova_training_data.py   # 处理图像和创建训练数据的脚本
+│   ├── upload_training_data.py         # 上传训练JSON文件到S3的脚本
+│   ├── plot_training_metrics.py        # 生成训练指标图表的脚本
+│   ├── nova_ft_dataset_validator.py    # 验证训练数据格式的脚本
+│   └── run_nova_preparation.sh         # 运行数据准备过程的Shell脚本
+│
+├── data/                               # 数据目录
+│   └── invoice_sellers.csv             # 包含图像名称和销售方信息的CSV文件
+│
+├── InvoiceDatasets/                    # 从GitHub仓库获取的数据集
+│   ├── dataset/
+│   │   └── images/
+│   │       └── vat_train/              # 包含发票图像的目录
+│   └── label-data-for-nova-custom-fine-tunning/
+│       └── output/                     # 训练JSON文件的输出目录
+│
+├── output/                             # 输出目录
+│   ├── logs/                           # 日志文件目录
+│   │   ├── nova_data_preparation.log   # 数据准备过程的日志
+│   │   ├── upload_training_data.log    # 上传训练数据的日志
+│   │   └── nova_validation.log         # 数据验证的日志
+│   └── models/                         # 模型输出目录
+│
+└── docs/                               # 文档目录
+    ├── training_loss_plot.png          # 训练损失图表
+    └── api_reference.md                # API参考文档
+```
 
-The `InvoiceDatasets` directory is sourced from a GitHub repository: https://github.com/example/invoice-datasets
+The `InvoiceDatasets` directory is sourced from a GitHub repository: https://github.com/FuxiJia/InvoiceDatasets.git
 
 ## Prerequisites
 
@@ -30,7 +56,7 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 
 2. Make the shell script executable:
    ```
-   chmod +x run_nova_preparation.sh
+   chmod +x scripts/run_nova_preparation.sh
    ```
 
 ## Usage
@@ -39,20 +65,20 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 
 Run the preparation script:
 ```
-./run_nova_preparation.sh
+./scripts/run_nova_preparation.sh
 ```
 
 The script will:
 - Read the CSV file with image names and seller information
 - Upload images to S3 bucket `aigcdemo.plaza.red` under the prefix `nova-fine-tunning/invoices/chinese/`
 - Create training JSON files in the output directory
-- Log the process in `nova_data_preparation.log`
+- Log the process in `output/logs/nova_data_preparation.log`
 
 ### Step 2: Upload Training JSON Files to S3
 
 Use the upload script to send the training JSON files to S3:
 ```
-python3 upload_training_data.py
+python3 scripts/upload_training_data.py
 ```
 
 Options:
@@ -64,14 +90,14 @@ Options:
 
 Example:
 ```
-python3 upload_training_data.py --s3-prefix nova-fine-tunning/training-data-v2
+python3 scripts/upload_training_data.py --s3-prefix nova-fine-tunning/training-data-v2
 ```
 
 ### Step 3: Create Fine-tuning Job
 
 Use the fine-tuning job creation script:
 ```
-python3 create_nova_finetuning_job.py
+python3 scripts/create_nova_finetuning_job.py
 ```
 
 Options:
@@ -90,7 +116,7 @@ Options:
 
 Example:
 ```
-python3 create_nova_finetuning_job.py --job-name "invoice-extraction-v2" --epoch-count 5
+python3 scripts/create_nova_finetuning_job.py --job-name "invoice-extraction-v2" --epoch-count 5
 ```
 
 ## Fine-tuning Process
@@ -158,11 +184,8 @@ The training data follows the Amazon Bedrock Nova fine-tuning format:
 ## References
 
 - [Amazon Bedrock Nova Fine-tuning Documentation](https://docs.aws.amazon.com/nova/latest/userguide/fine-tune-prepare-data-understanding.html)
+- [Training Data Validation Tool](https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py)
 
+## Training Results
 
-训练数据检查工具： https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py
-
-
-## 训练的数据
-
-![traning loss](./training_loss_plot.png)
+![training loss](./docs/training_loss_plot.png)
