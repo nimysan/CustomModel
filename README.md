@@ -10,12 +10,14 @@ nova-fine-tunning/
 ├── README.md                           # 项目说明文档
 │
 ├── scripts/                            # 脚本文件目录
-│   ├── prepare_nova_training_data.py   # 处理图像和创建训练数据的脚本
-│   ├── upload_training_data.py         # 上传训练JSON文件到S3的脚本
+│   ├── process_images_for_training.py  # 处理图像和创建训练数据的脚本
+│   ├── upload_data_to_s3.py            # 上传训练JSON文件到S3的脚本
 │   ├── generate_labels_with_llm.py     # 使用LLM生成标注数据的脚本
-│   ├── plot_training_metrics.py        # 生成训练指标图表的脚本
+│   ├── visualize_training_metrics.py   # 生成训练指标图表的脚本
+│   ├── visualize_detailed_metrics.py   # 生成详细训练指标图表的脚本
 │   ├── nova_ft_dataset_validator.py    # 验证训练数据格式的脚本
-│   └── run_nova_preparation.sh         # 运行数据准备过程的Shell脚本
+│   ├── validate_training_dataset.py    # 验证训练数据集的脚本
+│   └── run_data_preparation.sh         # 运行数据准备过程的Shell脚本
 │
 ├── data/                               # 数据目录
 │   └── invoice_sellers.csv             # 包含图像名称和销售方信息的CSV文件

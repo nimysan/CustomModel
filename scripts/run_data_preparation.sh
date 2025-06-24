@@ -10,8 +10,8 @@ fi
 pip install boto3 pandas
 
 # Run the data preparation script
-echo "Starting Nova fine-tuning data preparation..."
-python3 prepare_nova_training_data.py
+echo "Starting data preparation for fine-tuning..."
+python3 process_images_for_training.py
 
 # Check if the script ran successfully
 if [ $? -eq 0 ]; then
@@ -28,14 +28,11 @@ if [ $? -eq 0 ]; then
   fi
   
   echo ""
-  echo "Next steps for Nova fine-tuning:"
-  echo "1. Upload the JSONL file to an S3 bucket using the upload_training_data.py script:"
-  echo "   python3 upload_training_data.py"
+  echo "Next steps for fine-tuning:"
+  echo "1. Upload the JSONL file to an S3 bucket using the upload_data_to_s3.py script:"
+  echo "   python3 upload_data_to_s3.py"
   echo ""
-  echo "2. Create a fine-tuning job using the create_nova_finetuning_job.py script:"
-  echo "   python3 create_nova_finetuning_job.py --job-name \"invoice-seller-extraction\""
-  echo ""
-  echo "Or use the AWS CLI directly:"
+  echo "2. Create a fine-tuning job using the AWS CLI:"
   echo "aws bedrock create-model-customization-job \\"
   echo "  --customization-type FINE_TUNING \\"
   echo "  --base-model-identifier anthropic.claude-3-sonnet-20240229-v1:0 \\"
