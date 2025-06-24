@@ -530,3 +530,107 @@
 2025-06-24 13:12:22,722 - INFO - Total processed: 46
 2025-06-24 13:12:22,722 - INFO - Training JSONL file is available at: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
 2025-06-24 13:12:22,722 - INFO - Next step: Upload this file to S3 using upload_training_data.py
+2025-06-24 17:32:39,836 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 17:32:39,837 - WARNING - Skipping failed extraction entry: vat_0032.jpeg
+2025-06-24 17:32:39,837 - WARNING - Skipping failed extraction entry: vat_0037.jpeg
+2025-06-24 17:32:39,837 - WARNING - Skipping failed extraction entry: vat_0009.jpeg
+2025-06-24 17:32:39,837 - WARNING - Skipping failed extraction entry: vat_0029.jpeg
+2025-06-24 17:32:39,837 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 17:32:39,865 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 17:32:43,762 - INFO - Successfully uploaded vat_0047.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpeg
+2025-06-24 17:32:43,764 - INFO - Created and validated training data for: vat_0047.jpeg
+2025-06-24 17:32:47,619 - INFO - Successfully uploaded vat_0046.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpeg
+2025-06-24 17:32:47,622 - INFO - Created and validated training data for: vat_0046.jpeg
+2025-06-24 17:32:51,126 - INFO - Successfully uploaded vat_0044.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpeg
+2025-06-24 17:32:51,129 - INFO - Created and validated training data for: vat_0044.jpeg
+2025-06-24 17:32:54,587 - INFO - Successfully uploaded vat_0050.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpeg
+2025-06-24 17:32:54,590 - INFO - Created and validated training data for: vat_0050.jpeg
+2025-06-24 17:32:58,061 - INFO - Successfully uploaded vat_0045.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpeg
+2025-06-24 17:32:58,066 - INFO - Created and validated training data for: vat_0045.jpeg
+2025-06-24 17:33:01,667 - INFO - Successfully uploaded vat_0041.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpeg
+2025-06-24 17:33:01,671 - INFO - Created and validated training data for: vat_0041.jpeg
+2025-06-24 17:33:05,259 - INFO - Successfully uploaded vat_0040.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpeg
+2025-06-24 17:33:05,263 - INFO - Created and validated training data for: vat_0040.jpeg
+2025-06-24 17:33:08,819 - INFO - Successfully uploaded vat_0042.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpeg
+2025-06-24 17:33:08,823 - INFO - Created and validated training data for: vat_0042.jpeg
+2025-06-24 17:33:12,338 - INFO - Successfully uploaded vat_0043.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpeg
+2025-06-24 17:33:12,341 - INFO - Created and validated training data for: vat_0043.jpeg
+2025-06-24 17:33:16,025 - INFO - Successfully uploaded vat_0018.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpeg
+2025-06-24 17:33:16,028 - INFO - Created and validated training data for: vat_0018.jpeg
+2025-06-24 17:33:19,527 - INFO - Successfully uploaded vat_0030.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpeg
+2025-06-24 17:33:19,528 - INFO - Created and validated training data for: vat_0030.jpeg
+2025-06-24 17:33:23,036 - INFO - Successfully uploaded vat_0024.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpeg
+2025-06-24 17:33:23,041 - INFO - Created and validated training data for: vat_0024.jpeg
+2025-06-24 17:33:26,531 - INFO - Successfully uploaded vat_0025.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0025.jpeg
+2025-06-24 17:33:26,534 - INFO - Created and validated training data for: vat_0025.jpeg
+2025-06-24 17:33:30,038 - INFO - Successfully uploaded vat_0031.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0031.jpeg
+2025-06-24 17:33:30,041 - INFO - Created and validated training data for: vat_0031.jpeg
+2025-06-24 17:33:33,692 - INFO - Successfully uploaded vat_0019.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0019.jpeg
+2025-06-24 17:33:33,694 - INFO - Created and validated training data for: vat_0019.jpeg
+2025-06-24 17:33:37,183 - INFO - Successfully uploaded vat_0027.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0027.jpeg
+2025-06-24 17:33:37,186 - INFO - Created and validated training data for: vat_0027.jpeg
+2025-06-24 17:33:40,692 - INFO - Successfully uploaded vat_0033.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0033.jpeg
+2025-06-24 17:33:40,696 - INFO - Created and validated training data for: vat_0033.jpeg
+2025-06-24 17:33:44,282 - INFO - Successfully uploaded vat_0026.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0026.jpeg
+2025-06-24 17:33:44,290 - INFO - Created and validated training data for: vat_0026.jpeg
+2025-06-24 17:33:47,766 - INFO - Successfully uploaded vat_0022.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0022.jpeg
+2025-06-24 17:33:47,769 - INFO - Created and validated training data for: vat_0022.jpeg
+2025-06-24 17:33:51,403 - INFO - Successfully uploaded vat_0036.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0036.jpeg
+2025-06-24 17:33:51,407 - INFO - Created and validated training data for: vat_0036.jpeg
+2025-06-24 17:33:54,950 - INFO - Successfully uploaded vat_0023.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0023.jpeg
+2025-06-24 17:33:54,953 - INFO - Created and validated training data for: vat_0023.jpeg
+2025-06-24 17:33:58,700 - INFO - Successfully uploaded vat_0035.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0035.jpeg
+2025-06-24 17:33:58,705 - INFO - Created and validated training data for: vat_0035.jpeg
+2025-06-24 17:34:02,173 - INFO - Successfully uploaded vat_0021.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0021.jpeg
+2025-06-24 17:34:02,178 - INFO - Created and validated training data for: vat_0021.jpeg
+2025-06-24 17:34:05,625 - INFO - Successfully uploaded vat_0008.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0008.jpeg
+2025-06-24 17:34:05,629 - INFO - Created and validated training data for: vat_0008.jpeg
+2025-06-24 17:34:09,337 - INFO - Successfully uploaded vat_0020.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0020.jpeg
+2025-06-24 17:34:09,339 - INFO - Created and validated training data for: vat_0020.jpeg
+2025-06-24 17:34:12,852 - INFO - Successfully uploaded vat_0034.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0034.jpeg
+2025-06-24 17:34:12,854 - INFO - Created and validated training data for: vat_0034.jpeg
+2025-06-24 17:34:16,357 - INFO - Successfully uploaded vat_0039.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0039.jpeg
+2025-06-24 17:34:16,362 - INFO - Created and validated training data for: vat_0039.jpeg
+2025-06-24 17:34:20,314 - INFO - Successfully uploaded vat_0011.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0011.jpeg
+2025-06-24 17:34:20,316 - INFO - Created and validated training data for: vat_0011.jpeg
+2025-06-24 17:34:24,590 - INFO - Successfully uploaded vat_0005.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0005.jpeg
+2025-06-24 17:34:24,602 - INFO - Created and validated training data for: vat_0005.jpeg
+2025-06-24 17:34:28,286 - INFO - Successfully uploaded vat_0004.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0004.jpeg
+2025-06-24 17:34:28,288 - INFO - Created and validated training data for: vat_0004.jpeg
+2025-06-24 17:34:31,728 - INFO - Successfully uploaded vat_0010.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0010.jpeg
+2025-06-24 17:34:31,730 - INFO - Created and validated training data for: vat_0010.jpeg
+2025-06-24 17:34:35,322 - INFO - Successfully uploaded vat_0038.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0038.jpeg
+2025-06-24 17:34:35,327 - INFO - Created and validated training data for: vat_0038.jpeg
+2025-06-24 17:34:38,809 - INFO - Successfully uploaded vat_0006.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0006.jpeg
+2025-06-24 17:34:38,811 - INFO - Created and validated training data for: vat_0006.jpeg
+2025-06-24 17:34:42,301 - INFO - Successfully uploaded vat_0012.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0012.jpeg
+2025-06-24 17:34:42,305 - INFO - Created and validated training data for: vat_0012.jpeg
+2025-06-24 17:34:45,791 - INFO - Successfully uploaded vat_0013.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0013.jpeg
+2025-06-24 17:34:45,796 - INFO - Created and validated training data for: vat_0013.jpeg
+2025-06-24 17:34:49,297 - INFO - Successfully uploaded vat_0007.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0007.jpeg
+2025-06-24 17:34:49,300 - INFO - Created and validated training data for: vat_0007.jpeg
+2025-06-24 17:34:53,162 - INFO - Successfully uploaded vat_0003.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0003.jpeg
+2025-06-24 17:34:53,166 - INFO - Created and validated training data for: vat_0003.jpeg
+2025-06-24 17:34:56,980 - INFO - Successfully uploaded vat_0017.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0017.jpeg
+2025-06-24 17:34:56,985 - INFO - Created and validated training data for: vat_0017.jpeg
+2025-06-24 17:35:00,846 - INFO - Successfully uploaded vat_0016.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0016.jpeg
+2025-06-24 17:35:00,849 - INFO - Created and validated training data for: vat_0016.jpeg
+2025-06-24 17:35:04,343 - INFO - Successfully uploaded vat_0002.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0002.jpeg
+2025-06-24 17:35:04,346 - INFO - Created and validated training data for: vat_0002.jpeg
+2025-06-24 17:35:07,875 - INFO - Successfully uploaded vat_0014.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0014.jpeg
+2025-06-24 17:35:07,876 - INFO - Created and validated training data for: vat_0014.jpeg
+2025-06-24 17:35:11,403 - INFO - Successfully uploaded vat_0028.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0028.jpeg
+2025-06-24 17:35:11,406 - INFO - Created and validated training data for: vat_0028.jpeg
+2025-06-24 17:35:14,916 - INFO - Successfully uploaded vat_0001.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0001.jpeg
+2025-06-24 17:35:14,923 - INFO - Created and validated training data for: vat_0001.jpeg
+2025-06-24 17:35:18,443 - INFO - Successfully uploaded vat_0015.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0015.jpeg
+2025-06-24 17:35:18,447 - INFO - Created and validated training data for: vat_0015.jpeg
+2025-06-24 17:35:22,620 - INFO - Successfully uploaded vat_0048.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0048.jpeg
+2025-06-24 17:35:22,624 - INFO - Created and validated training data for: vat_0048.jpeg
+2025-06-24 17:35:26,063 - INFO - Successfully uploaded vat_0049.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0049.jpeg
+2025-06-24 17:35:26,066 - INFO - Created and validated training data for: vat_0049.jpeg
+2025-06-24 17:35:26,067 - INFO - Data preparation completed.
+2025-06-24 17:35:26,067 - INFO - Successful: 46, Failed: 0, Skipped: 0
+2025-06-24 17:35:26,067 - INFO - Total processed: 46
+2025-06-24 17:35:26,067 - INFO - Training JSONL file is available at: ../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
+2025-06-24 17:35:26,067 - INFO - Next step: Upload this file to S3 using upload_training_data.py

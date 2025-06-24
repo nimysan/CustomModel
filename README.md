@@ -18,10 +18,15 @@ nova-fine-tunning/
 │   ├── nova_ft_dataset_validator.py    # 验证训练数据格式的脚本
 │   ├── validate_training_dataset.py    # 验证训练数据集的脚本
 │   ├── run_data_preparation.sh         # 运行数据准备过程的Shell脚本
-│   └── run_complete_pipeline.sh        # 执行完整数据处理流水线的Shell脚本
+│   ├── run_complete_pipeline.sh        # 执行完整数据处理流水线的Shell脚本
+│   └── setup_environment.sh            # 设置环境和目录结构的脚本
 │
 ├── data/                               # 数据目录
-│   └── invoice_sellers.csv             # 包含图像名称和销售方信息的CSV文件
+│   ├── images/                         # 发票图像目录
+│   ├── label_data/                     # 标注数据目录
+│   │   └── invoice_sellers.csv         # 包含图像名称和销售方信息的CSV文件
+│   └── bedrock-ft/                     # Bedrock微调数据目录
+│       └── training_data.jsonl         # 训练JSONL文件
 │
 ├── InvoiceDatasets/                    # 从GitHub仓库获取的数据集
 │   ├── dataset/
@@ -34,12 +39,17 @@ nova-fine-tunning/
 │   ├── logs/                           # 日志文件目录
 │   │   ├── nova_data_preparation.log   # 数据准备过程的日志
 │   │   ├── upload_training_data.log    # 上传训练数据的日志
-│   │   └── nova_validation.log         # 数据验证的日志
+│   │   ├── nova_validation.log         # 数据验证的日志
+│   │   └── complete_pipeline.log       # 完整流水线的日志
 │   └── models/                         # 模型输出目录
 │
-└── docs/                               # 文档目录
-    ├── training_loss_plot.png          # 训练损失图表
-    └── api_reference.md                # API参考文档
+├── docs/                               # 文档目录
+│   ├── training_loss_plot.png          # 训练损失图表
+│   ├── detailed_training_metrics.png   # 详细训练指标图表
+│   ├── api_reference.md                # API参考文档
+│   └── pipeline_usage.md               # 流水线使用指南
+│
+└── config.env                          # 环境变量配置文件
 ```
 
 The `InvoiceDatasets` directory is sourced from a GitHub repository: https://github.com/FuxiJia/InvoiceDatasets.git
@@ -50,6 +60,10 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 2. Python 3.6+ with the following packages:
    - boto3
    - pandas
+   - python-dotenv
+   - matplotlib
+   - seaborn
+   - pydantic
 
 ## Setup
 
@@ -60,9 +74,23 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 
 2. Make the shell scripts executable:
    ```
-   chmod +x scripts/run_data_preparation.sh
-   chmod +x scripts/run_complete_pipeline.sh
+   chmod +x scripts/*.sh
    ```
+
+3. Set up the environment:
+   ```
+   cd scripts
+   ./setup_environment.sh
+   ```
+
+## Configuration
+
+The project uses a central configuration file `config.env` that contains all path and AWS settings. You can modify this file to customize:
+
+- Local directory paths
+- S3 bucket and prefix paths
+- AWS account ID
+- Log file locations
 
 ## Usage
 
@@ -70,12 +98,14 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 
 运行完整的数据处理流水线：
 ```
-./scripts/run_complete_pipeline.sh
+cd scripts
+./run_complete_pipeline.sh [S3_BUCKET]
 ```
 
 如果需要包含LLM标注生成步骤：
 ```
-./scripts/run_complete_pipeline.sh --generate-labels
+cd scripts
+./run_complete_pipeline.sh [S3_BUCKET] --generate-labels
 ```
 
 完整流水线将执行以下步骤：
@@ -88,86 +118,49 @@ The `InvoiceDatasets` directory is sourced from a GitHub repository: https://git
 
 ### 方法2: 单独执行各步骤
 
-#### Step 1: 准备训练数据
+#### Step 1: 生成标注数据（可选）
+
+使用LLM生成标注数据：
+```
+cd scripts
+python3 generate_labels_with_llm.py
+```
+
+#### Step 2: 准备训练数据
 
 运行准备脚本：
 ```
-./scripts/run_data_preparation.sh
+cd scripts
+./run_data_preparation.sh
 ```
 
 该脚本将：
 - 读取CSV文件中的图像名称和销售方信息
-- 将图像上传到S3存储桶 `aigcdemo.plaza.red` 的 `nova-fine-tunning/invoices/chinese/` 前缀下
+- 将图像上传到S3存储桶的 `nova-ft/images/` 前缀下
 - 在输出目录中创建训练JSON文件
 - 将处理过程记录在 `output/logs/nova_data_preparation.log`
 
-### Step 2: Upload Training JSON Files to S3
+#### Step 3: 上传训练JSON文件到S3
 
-Use the upload script to send the training JSON files to S3:
+使用上传脚本将训练JSON文件发送到S3：
 ```
-python3 scripts/upload_training_data.py
-```
-
-Options:
-- `--input-dir`: Directory containing JSON training files
-- `--s3-bucket`: S3 bucket name
-- `--s3-prefix`: S3 prefix (folder path)
-- `--region`: AWS region
-- `--dry-run`: Print files to upload without actually uploading
-
-Example:
-```
-python3 scripts/upload_training_data.py --s3-prefix nova-fine-tunning/training-data-v2
+cd scripts
+python3 upload_data_to_s3.py [--s3-bucket BUCKET_NAME]
 ```
 
-### Step 3: Create Fine-tuning Job
+#### Step 4: 创建微调作业
 
-Use the fine-tuning job creation script:
+使用AWS CLI创建微调作业：
 ```
-python3 scripts/create_nova_finetuning_job.py
-```
-
-Options:
-- `--base-model-id`: Base model ID
-- `--job-name`: Job name
-- `--custom-model-name`: Custom model name
-- `--training-data-s3-uri`: S3 URI for training data
-- `--output-s3-uri`: S3 URI for output data
-- `--role-arn`: IAM role ARN
-- `--region`: AWS region
-- `--epoch-count`: Number of epochs
-- `--batch-size`: Batch size
-- `--learning-rate`: Learning rate
-- `--dry-run`: Print the job configuration without creating the job
-- `--skip-s3-check`: Skip checking S3 for training data
-
-Example:
-```
-python3 scripts/create_nova_finetuning_job.py --job-name "invoice-extraction-v2" --epoch-count 5
-```
-
-## Fine-tuning Process
-
-The fine-tuning process consists of three main steps:
-
-1. **Data Preparation**: Convert your labeled data into the required format for Nova fine-tuning
-2. **Upload Training Data**: Upload the formatted data to an S3 bucket
-3. **Create Fine-tuning Job**: Submit a fine-tuning job to Amazon Bedrock
-
-The scripts in this project automate all three steps, but you can also perform them manually:
-
-### Manual Fine-tuning with AWS CLI
-
-```bash
 aws bedrock create-model-customization-job \
   --customization-type FINE_TUNING \
   --base-model-identifier anthropic.claude-3-sonnet-20240229-v1:0 \
   --job-name "invoice-seller-extraction" \
   --role-arn "arn:aws:iam::390468416359:role/service-role/AmazonBedrockExecutionRoleForNova" \
   --custom-model-name "invoice-seller-extraction" \
-  --training-data-config "s3Uri=s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/" \
+  --training-data-config "s3Uri=s3://your-bucket/nova-ft/training/data/" \
   --hyperparameters "epochCount=3,batchSize=1,learningRate=0.0001" \
-  --output-data-config "s3Uri=s3://aigcdemo.plaza.red/nova-fine-tunning/output/"
+  --output-data-config "s3Uri=s3://your-bucket/nova-ft/output/"
 ```
 
 ## Training Data Format
@@ -190,7 +183,7 @@ The training data follows the Amazon Bedrock Nova fine-tuning format:
             "format": "jpg",
             "source": {
               "s3Location": {
-                "uri": "aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_xxxx.jpg",
+                "uri": "your-bucket/nova-ft/images/vat_xxxx.jpg",
                 "bucketOwner": "390468416359"
               }
             }

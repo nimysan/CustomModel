@@ -9,154 +9,180 @@ import os
 import boto3
 import json
 import csv
+import argparse
+import dotenv
 from pathlib import Path
 import logging
 from io import BytesIO
 from PIL import Image
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+def parse_arguments():
+    """解析命令行参数。"""
+    parser = argparse.ArgumentParser(description='使用LLM生成发票销售方标注数据')
+    
+    parser.add_argument('--input-dir', type=str, help='包含发票图像的目录')
+    parser.add_argument('--output-file', type=str, help='输出CSV文件路径')
+    parser.add_argument('--model', type=str, default='anthropic.claude-3-sonnet-20240229-v1', help='要使用的LLM模型')
+    parser.add_argument('--batch-size', type=int, default=10, help='每批处理的图像数量')
+    parser.add_argument('--config', type=str, default='../config.env', help='配置文件路径')
+    
+    return parser.parse_args()
 
-# 图片目录路径
-IMAGE_DIR = Path("/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/dataset/images/vat_train")
-OUTPUT_FILE = Path("/Users/yexw/PycharmProjects/nova-fine-tunning/invoice_sellers.csv")
-
-# 初始化 Bedrock 客户端 - 使用 cross-region inference
-def get_bedrock_client():
-    try:
-        # 创建主区域的 Bedrock 客户端
-        bedrock_runtime = boto3.client(
-            service_name="bedrock-runtime",
-            region_name="us-east-1"  # 主区域
-        )
-        return bedrock_runtime
-    except Exception as e:
-        logger.error(f"创建 Bedrock 客户端失败: {e}")
-        raise
-
-# 读取图片并转换为 WEBP 格式的二进制数据
-def process_image(image_path):
-    try:
-        # 使用 PIL 打开图片
-        image = Image.open(image_path)
-        
-        # 将图片转换为 WEBP 格式并保存到 BytesIO 缓冲区
-        buffer = BytesIO()
-        image.save(buffer, format="WEBP", quality=90)
-        image_data = buffer.getvalue()
-        
-        return image_data
-    except Exception as e:
-        logger.error(f"图片处理失败 {image_path}: {e}")
-        return None
-
-# 使用 Bedrock 的 Claude 模型识别图片中的销售方 - 使用 cross-region inference
-def extract_seller_info(client, image_data):
-    try:
-        # 构建请求体 - 使用正确的参数格式和指定模型版本
-        request_body = {
-            "modelId": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",  # 使用指定的 Claude 3.7 Sonnet 模型版本
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "image": {
-                                "format": "webp",
-                                "source": {
-                                    "bytes": image_data
-                                }
-                            }
-                        },
-                        {
-                            "text": "这是一张发票图片。请识别并提取出销售方名称。只需要返回销售方名称，不要有其他文字。请确保提取的是销售方（开票方），而不是购买方（收票方）。"
-                        }
-                    ]
-                }
-            ]
-        }
-        
-        # 调用 Bedrock 的 Claude 模型
-        response = client.converse(**request_body)
-        
-        # 解析响应
-        response_content = response.get('messages', [{}])[0].get('content', [{}])
-        seller_name = ""
-        
-            # 获取模型输出
-        model_output = response.get('output')["message"]["content"][0]["text"]
-        
-        # 获取性能指标
-        metrics = response.get('metrics', {})
-        latency_ms = metrics.get('latencyMs', 'N/A')
-        usage = response.get('usage', {})
-        
-        # 构建输出文本
-        output_text = (
-            f"模型输出:\n{model_output}\n\n"
-            f"性能指标:\n"
-            f"延迟：{latency_ms}ms\n"
-            f"Token使用统计:\n"
-            f"输入tokens：{usage.get('inputTokens', 'N/A')}\n"
-            f"输出tokens：{usage.get('outputTokens', 'N/A')}\n"
-            f"总tokens：{usage.get('totalTokens', 'N/A')}"
-        )
-        logger.info("the output is: "+model_output)
-        return model_output
-        
-        # return seller_name
-    except Exception as e:
-        logger.error(f"提取销售方信息失败: {e}")
-        return f"提取失败: {str(e)}"
+def load_config(config_path):
+    """加载环境变量配置。"""
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"配置文件不存在: {config_path}")
+    
+    dotenv.load_dotenv(config_path)
+    
+    # 获取必要的环境变量
+    config = {
+        'input_dir': os.path.join('..', os.getenv('IMAGES_DIR')),
+        'output_file': os.path.join('..', os.getenv('INVOICE_SELLERS_CSV')),
+        'log_file': os.path.join('..', os.getenv('LOGS_DIR'), 'generate_labels.log')
+    }
+    
+    return config
 
 def main():
-    try:
-        # 检查图片目录是否存在
-        if not IMAGE_DIR.exists() or not IMAGE_DIR.is_dir():
-            logger.error(f"图片目录不存在: {IMAGE_DIR}")
-            return
-        
-        # 获取 Bedrock 客户端
-        bedrock_client = get_bedrock_client()
-        
-        # 准备输出 CSV 文件
-        with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as csvfile:
-            csv_writer = csv.writer(csvfile)
-            csv_writer.writerow(['图片名称', '销售方'])
-            
-            # 处理目录中的所有图片
-            image_files = [f for f in IMAGE_DIR.iterdir() if f.is_file() and f.suffix.lower() in ('.jpg', '.jpeg', '.png')]
-            total_images = len(image_files)
-            
-            logger.info(f"开始处理 {total_images} 张图片...")
-            
-            for i, image_path in enumerate(image_files, 1):
-                try:
-                    logger.info(f"处理图片 {i}/{total_images}: {image_path.name}")
-                    
-                    # 处理图片
-                    image_data = process_image(image_path)
-                    if not image_data:
-                        logger.warning(f"跳过图片 {image_path.name} - 处理失败")
-                        csv_writer.writerow([image_path.name, "处理失败"])
-                        continue
-                    
-                    # 提取销售方信息
-                    seller_name = extract_seller_info(bedrock_client, image_data)
-                    
-                    # 写入 CSV
-                    csv_writer.writerow([image_path.name, seller_name])
-                    logger.info(f"已提取: {image_path.name} -> {seller_name}")
-                    
-                except Exception as e:
-                    logger.error(f"处理图片 {image_path.name} 时出错: {e}")
-                    csv_writer.writerow([image_path.name, f"处理失败: {str(e)}"])
-        
-        logger.info(f"处理完成! 结果已保存到 {OUTPUT_FILE}")
+    # 解析命令行参数
+    args = parse_arguments()
     
+    # 加载配置
+    config = load_config(args.config)
+    
+    # 命令行参数覆盖配置文件
+    input_dir = args.input_dir if args.input_dir else config['input_dir']
+    output_file = args.output_file if args.output_file else config['output_file']
+    
+    # 确保输出目录存在
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    
+    # 配置日志
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(config['log_file']),
+            logging.StreamHandler()
+        ]
+    )
+    logger = logging.getLogger(__name__)
+    
+    logger.info(f"使用配置:")
+    logger.info(f"- 输入目录: {input_dir}")
+    logger.info(f"- 输出文件: {output_file}")
+    logger.info(f"- 模型: {args.model}")
+    logger.info(f"- 批处理大小: {args.batch_size}")
+    
+    # 获取图像文件列表
+    image_files = []
+    for ext in ['*.jpg', '*.jpeg', '*.png']:
+        image_files.extend(Path(input_dir).glob(ext))
+    
+    logger.info(f"找到 {len(image_files)} 个图像文件")
+    
+    # 创建Bedrock客户端
+    bedrock_runtime = boto3.client(
+        service_name='bedrock-runtime',
+        region_name='us-east-1'  # 使用支持Claude的区域
+    )
+    
+    # 准备CSV文件
+    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['图片名称', '销售方']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        
+        # 处理每个图像
+        for i, image_path in enumerate(image_files):
+            try:
+                logger.info(f"处理图像 {i+1}/{len(image_files)}: {image_path.name}")
+                
+                # 读取图像
+                with open(image_path, 'rb') as f:
+                    image_bytes = f.read()
+                
+                # 调用Claude模型
+                response = invoke_claude_with_image(bedrock_runtime, args.model, image_bytes)
+                
+                # 解析响应
+                seller_name = parse_claude_response(response)
+                
+                # 写入CSV
+                writer.writerow({
+                    '图片名称': image_path.name,
+                    '销售方': seller_name
+                })
+                
+                logger.info(f"提取的销售方: {seller_name}")
+                
+                # 每批次后保存
+                if (i + 1) % args.batch_size == 0:
+                    csvfile.flush()
+                    logger.info(f"已处理 {i+1}/{len(image_files)} 个图像")
+                
+            except Exception as e:
+                logger.error(f"处理图像 {image_path.name} 时出错: {e}")
+                # 记录错误但继续处理
+                writer.writerow({
+                    '图片名称': image_path.name,
+                    '销售方': f"提取失败: {str(e)}"
+                })
+    
+    logger.info(f"处理完成。结果保存到 {output_file}")
+
+def invoke_claude_with_image(client, model_id, image_bytes):
+    """调用Claude模型处理图像。"""
+    # 将图像编码为base64
+    import base64
+    image_base64 = base64.b64encode(image_bytes).decode('utf-8')
+    
+    # 构建请求
+    request = {
+        "anthropic_version": "bedrock-2023-05-31",
+        "max_tokens": 1000,
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image",
+                        "source": {
+                            "type": "base64",
+                            "media_type": "image/jpeg",
+                            "data": image_base64
+                        }
+                    },
+                    {
+                        "type": "text",
+                        "text": "这是一张中国增值税发票。请识别并提取出销售方名称。只需要返回销售方名称，不要有其他文字。请确保提取的是销售方（开票方），而不是购买方（收票方）。"
+                    }
+                ]
+            }
+        ]
+    }
+    
+    # 调用模型
+    response = client.invoke_model(
+        modelId=model_id,
+        body=json.dumps(request)
+    )
+    
+    # 解析响应
+    response_body = json.loads(response['body'].read().decode('utf-8'))
+    return response_body
+
+def parse_claude_response(response):
+    """从Claude响应中解析销售方名称。"""
+    try:
+        content = response['content'][0]['text']
+        # 清理响应（删除可能的前缀和后缀）
+        content = content.strip()
+        return content
     except Exception as e:
-        logger.error(f"程序执行失败: {e}")
+        logging.error(f"解析响应时出错: {e}")
+        return "提取失败"
 
 if __name__ == "__main__":
     main()

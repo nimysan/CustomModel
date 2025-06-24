@@ -3,61 +3,89 @@
 Script to visualize training metrics from step_wise_training_metrics.csv
 """
 
+import os
+import argparse
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import dotenv
 
-# Read the CSV file
-df = pd.read_csv('step_wise_training_metrics.csv')
+def parse_arguments():
+    """解析命令行参数。"""
+    parser = argparse.ArgumentParser(description='生成训练指标图表')
+    
+    parser.add_argument('--metrics-file', type=str, help='指标CSV文件路径')
+    parser.add_argument('--output-dir', type=str, help='保存生成图表的目录')
+    parser.add_argument('--show', action='store_true', help='显示图表而不是保存')
+    parser.add_argument('--config', type=str, default='../config.env', help='配置文件路径')
+    
+    return parser.parse_args()
 
-# Create a figure and axis
-plt.figure(figsize=(12, 6))
+def load_config(config_path):
+    """加载环境变量配置。"""
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"配置文件不存在: {config_path}")
+    
+    dotenv.load_dotenv(config_path)
+    
+    # 获取必要的环境变量
+    config = {
+        'metrics_file': os.path.join('..', os.getenv('MODELS_DIR'), 'step_wise_training_metrics.csv'),
+        'output_dir': os.path.join('..', os.getenv('DOCS_DIR'))
+    }
+    
+    return config
 
-# Plot training loss vs step number
-plt.plot(df['step_number'], df['training_loss'], marker='o', linestyle='-', color='blue', label='Training Loss')
+def visualize_metrics(metrics_file, output_dir=None, show=False):
+    """生成训练指标图表。"""
+    # 读取CSV文件
+    df = pd.read_csv(metrics_file)
+    
+    # 创建图形和坐标轴
+    plt.figure(figsize=(12, 6))
+    
+    # 绘制训练损失与步骤数
+    plt.plot(df['step_number'], df['training_loss'], marker='o', linestyle='-', color='blue', label='Training Loss')
+    
+    # 为每个epoch添加标记
+    epochs = df['epoch_number'].unique()
+    for epoch in epochs:
+        epoch_start = df[df['epoch_number'] == epoch].iloc[0]['step_number']
+        plt.axvline(x=epoch_start, color='red', linestyle='--', alpha=0.3)
+        plt.text(epoch_start, plt.ylim()[1]*0.9, f'Epoch {epoch}', rotation=90, alpha=0.7)
+    
+    # 添加标题和标签
+    plt.title('Training Loss vs Step Number')
+    plt.xlabel('Step Number')
+    plt.ylabel('Training Loss')
+    plt.grid(True, alpha=0.3)
+    plt.legend()
+    
+    # 保存或显示图表
+    if show:
+        plt.show()
+    elif output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, 'training_loss_plot.png')
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        print(f"图表已保存到: {output_path}")
+    else:
+        plt.show()
 
-# Add markers for each epoch
-epochs = df['epoch_number'].unique()
-colors = plt.cm.viridis(np.linspace(0, 1, len(epochs)))
+def main():
+    """生成训练指标图表的主函数。"""
+    # 解析命令行参数
+    args = parse_arguments()
+    
+    # 加载配置
+    config = load_config(args.config)
+    
+    # 命令行参数覆盖配置文件
+    metrics_file = args.metrics_file if args.metrics_file else config['metrics_file']
+    output_dir = args.output_dir if args.output_dir else config['output_dir']
+    
+    # 生成图表
+    visualize_metrics(metrics_file, output_dir, args.show)
 
-for i, epoch in enumerate(epochs):
-    epoch_data = df[df['epoch_number'] == epoch]
-    plt.scatter(epoch_data['step_number'], epoch_data['training_loss'], 
-                color=colors[i], s=100, label=f'Epoch {epoch}', zorder=5)
-
-# Add vertical lines to separate epochs
-for epoch in epochs[1:]:
-    first_step = df[df['epoch_number'] == epoch]['step_number'].min()
-    plt.axvline(x=first_step-0.5, color='gray', linestyle='--', alpha=0.7)
-
-# Add labels and title
-plt.xlabel('Step Number')
-plt.ylabel('Training Loss')
-plt.title('Training Loss vs Step Number')
-plt.grid(True, linestyle='--', alpha=0.7)
-plt.legend()
-
-# Add epoch labels at the top
-for i, epoch in enumerate(epochs):
-    epoch_data = df[df['epoch_number'] == epoch]
-    mid_x = (epoch_data['step_number'].min() + epoch_data['step_number'].max()) / 2
-    plt.text(mid_x, plt.ylim()[1] * 1.01, f'Epoch {epoch}', 
-             horizontalalignment='center', fontsize=12)
-
-# Add annotations for min loss in each epoch
-for epoch in epochs:
-    epoch_data = df[df['epoch_number'] == epoch]
-    min_loss_row = epoch_data.loc[epoch_data['training_loss'].idxmin()]
-    plt.annotate(f"{min_loss_row['training_loss']:.3f}",
-                 (min_loss_row['step_number'], min_loss_row['training_loss']),
-                 textcoords="offset points", xytext=(0,-15), ha='center')
-
-# Improve layout
-plt.tight_layout()
-
-# Save the figure
-plt.savefig('training_loss_plot.png', dpi=300)
-print("Plot saved as training_loss_plot.png")
-
-# Show the plot
-plt.show()
+if __name__ == "__main__":
+    main()

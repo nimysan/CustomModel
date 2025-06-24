@@ -4,134 +4,121 @@ import argparse
 import subprocess
 import logging
 import glob
+import dotenv
 from pathlib import Path
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("nova_validation.log"),
-        logging.StreamHandler()
-    ]
-)
-
-# Default configuration
-DEFAULT_CONFIG = {
-    "input_dir": "/Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output",
-    "model_name": "anthropic.claude-3-sonnet-20240229-v1:0",
-    "validator_path": "./nova_ft_dataset_validator.py"
-}
-
 def parse_arguments():
-    """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description='Validate Nova fine-tuning dataset')
+    """解析命令行参数。"""
+    parser = argparse.ArgumentParser(description='验证训练数据集')
     
-    parser.add_argument('--input-dir', type=str, default=DEFAULT_CONFIG["input_dir"],
-                        help=f'Directory containing JSON training files (default: {DEFAULT_CONFIG["input_dir"]})')
-    
-    parser.add_argument('--model-name', type=str, default=DEFAULT_CONFIG["model_name"],
-                        help=f'Model name for validation (default: {DEFAULT_CONFIG["model_name"]})')
-    
-    parser.add_argument('--validator-path', type=str, default=DEFAULT_CONFIG["validator_path"],
-                        help=f'Path to nova_ft_dataset_validator.py (default: {DEFAULT_CONFIG["validator_path"]})')
-    
-    parser.add_argument('--single-file', type=str, default=None,
-                        help='Validate a single file instead of a directory')
+    parser.add_argument('--input-dir', type=str, help='包含训练数据的目录')
+    parser.add_argument('--report-file', type=str, help='保存验证报告的路径')
+    parser.add_argument('--fix', action='store_true', help='尝试修复数据集中的常见问题')
+    parser.add_argument('--config', type=str, default='../config.env', help='配置文件路径')
     
     return parser.parse_args()
 
-def validate_single_file(file_path, model_name, validator_path):
-    """Validate a single JSON file."""
-    if not os.path.exists(file_path):
-        logging.error(f"File not found: {file_path}")
-        return False
+def load_config(config_path):
+    """加载环境变量配置。"""
+    if not os.path.exists(config_path):
+        raise FileNotFoundError(f"配置文件不存在: {config_path}")
     
+    dotenv.load_dotenv(config_path)
+    
+    # 获取必要的环境变量
+    config = {
+        'input_dir': os.path.join('..', os.getenv('BEDROCK_FT_DIR')),
+        'report_file': os.path.join('..', os.getenv('LOGS_DIR'), 'validation_report.txt'),
+        'log_file': os.path.join('..', os.getenv('VALIDATION_LOG'))
+    }
+    
+    return config
+
+def validate_jsonl_file(jsonl_path, report_file, fix=False):
+    """验证JSONL文件格式。"""
     try:
-        logging.info(f"Validating file: {file_path}")
-        cmd = ["python3", validator_path, "-i", file_path, "-m", model_name]
+        # 使用nova_ft_dataset_validator.py验证
+        cmd = ['python3', 'nova_ft_dataset_validator.py', '--input_file', jsonl_path, '--model_name', 'lite']
         result = subprocess.run(cmd, capture_output=True, text=True)
         
-        if result.returncode == 0:
-            logging.info(f"Validation successful: {file_path}")
-            if result.stdout:
-                logging.info(f"Output: {result.stdout}")
-            return True
-        else:
-            logging.error(f"Validation failed for {file_path}: {result.stderr}")
-            if result.stdout:
-                logging.info(f"Output: {result.stdout}")
-            return False
+        with open(report_file, 'w') as f:
+            f.write("=== 训练数据验证报告 ===\n\n")
+            f.write(f"验证文件: {jsonl_path}\n\n")
+            
+            if result.returncode == 0:
+                f.write("✅ 验证成功! 数据格式符合Nova微调要求。\n")
+                f.write("\n详细信息:\n")
+                f.write(result.stdout)
+                logging.info(f"验证成功: {jsonl_path}")
+                return True
+            else:
+                f.write("❌ 验证失败! 数据格式存在问题。\n")
+                f.write("\n错误信息:\n")
+                f.write(result.stderr)
+                f.write("\n详细信息:\n")
+                f.write(result.stdout)
+                
+                if fix:
+                    f.write("\n\n尝试修复问题...\n")
+                    # 这里可以添加修复逻辑
+                    f.write("自动修复功能尚未实现。请手动修复问题。\n")
+                
+                logging.error(f"验证失败: {jsonl_path}")
+                return False
     
     except Exception as e:
-        logging.error(f"Error validating file {file_path}: {e}")
+        logging.error(f"验证过程中出错: {e}")
+        with open(report_file, 'w') as f:
+            f.write("=== 训练数据验证报告 ===\n\n")
+            f.write(f"验证文件: {jsonl_path}\n\n")
+            f.write(f"❌ 验证过程中出错: {e}\n")
         return False
 
-def validate_directory(input_dir, model_name, validator_path):
-    """Validate all JSON files in a directory."""
-    if not os.path.exists(input_dir):
-        logging.error(f"Directory not found: {input_dir}")
-        return
-    
-    # Find all JSON files in the input directory
-    json_files = glob.glob(os.path.join(input_dir, "*.json"))
-    if not json_files:
-        logging.error(f"No JSON files found in {input_dir}")
-        return
-    
-    logging.info(f"Found {len(json_files)} JSON files to validate")
-    
-    # Validate each file
-    successful = 0
-    failed = 0
-    
-    for file_path in json_files:
-        if validate_single_file(file_path, model_name, validator_path):
-            successful += 1
-        else:
-            failed += 1
-    
-    # Log summary
-    logging.info(f"Validation completed. Successful: {successful}, Failed: {failed}")
-    
-    if failed > 0:
-        logging.warning(f"⚠️ {failed} files failed validation. Check the log for details.")
-    else:
-        logging.info("✅ All files passed validation!")
-
-def check_validator_exists(validator_path):
-    """Check if the validator script exists."""
-    if os.path.exists(validator_path):
-        return True
-    
-    # If not found at the specified path, check if it's in the current directory
-    current_dir_path = os.path.join(os.getcwd(), os.path.basename(validator_path))
-    if os.path.exists(current_dir_path):
-        return True
-    
-    logging.error(f"Validator script not found at {validator_path}")
-    logging.error("Please download the validator script from: https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py")
-    return False
-
 def main():
-    """Main function to validate Nova fine-tuning dataset."""
-    # Parse command line arguments
+    """验证训练数据集的主函数。"""
+    # 解析命令行参数
     args = parse_arguments()
     
-    # Check if validator exists
-    if not check_validator_exists(args.validator_path):
-        return
+    # 加载配置
+    config = load_config(args.config)
     
-    # Log the configuration
-    logging.info(f"Validator path: {args.validator_path}")
-    logging.info(f"Model name: {args.model_name}")
+    # 命令行参数覆盖配置文件
+    input_dir = args.input_dir if args.input_dir else config['input_dir']
+    report_file = args.report_file if args.report_file else config['report_file']
     
-    # Validate files
-    if args.single_file:
-        validate_single_file(args.single_file, args.model_name, args.validator_path)
+    # 配置日志
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler(config['log_file']),
+            logging.StreamHandler()
+        ]
+    )
+    
+    # 记录配置
+    logging.info(f"输入目录: {input_dir}")
+    logging.info(f"报告文件: {report_file}")
+    logging.info(f"修复模式: {args.fix}")
+    
+    # 确保输出目录存在
+    os.makedirs(os.path.dirname(report_file), exist_ok=True)
+    
+    # 查找JSONL文件
+    jsonl_file = os.path.join(input_dir, "training_data.jsonl")
+    if not os.path.exists(jsonl_file):
+        logging.error(f"JSONL文件未找到: {jsonl_file}")
+        return False
+    
+    # 验证JSONL文件
+    success = validate_jsonl_file(jsonl_file, report_file, args.fix)
+    
+    if success:
+        logging.info(f"验证成功完成。报告保存在: {report_file}")
     else:
-        logging.info(f"Input directory: {args.input_dir}")
-        validate_directory(args.input_dir, args.model_name, args.validator_path)
+        logging.error(f"验证失败。报告保存在: {report_file}")
+    
+    return success
 
 if __name__ == "__main__":
     main()

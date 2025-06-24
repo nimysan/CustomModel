@@ -1,6 +1,9 @@
 import argparse
 import json
 import re
+import os
+import dotenv
+import logging
 
 from pydantic import BaseModel, ValidationError, ValidationInfo, field_validator, model_validator
 from typing import List, Optional
@@ -323,7 +326,6 @@ if __name__ == "__main__":
         "-i",
         "--input_file",
         type=str,
-        required=True,
         help="The input jsonl file in Nova converse format",
     )
     parser.add_argument(
@@ -331,8 +333,35 @@ if __name__ == "__main__":
         "--model_name",
         type=str,
         choices=["micro", "lite", "pro"],
-        required=True,
+        default="lite",
         help="Choose a model from: micro, lite, pro",
     )
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="../config.env",
+        help="配置文件路径",
+    )
     args = parser.parse_args()
+    
+    # 加载环境变量配置
+    if os.path.exists(args.config):
+        dotenv.load_dotenv(args.config)
+        
+        # 配置日志
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler(os.path.join('..', os.getenv('VALIDATION_LOG', 'output/logs/nova_validation.log'))),
+                logging.StreamHandler()
+            ]
+        )
+        
+        # 如果未提供输入文件，则使用环境变量中的默认值
+        if not args.input_file:
+            bedrock_ft_dir = os.getenv('BEDROCK_FT_DIR', 'data/bedrock-ft')
+            args.input_file = os.path.join('..', bedrock_ft_dir, 'training_data.jsonl')
+            logging.info(f"使用默认输入文件: {args.input_file}")
+    
     validate_converse_dataset(args)
