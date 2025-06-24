@@ -40,6 +40,23 @@ python3 scripts/upload_training_data.py [options]
 - `--region`: AWS region
 - `--dry-run`: Print files to upload without actually uploading
 
+## generate_labels_with_llm.py
+
+Uses a large language model (LLM) to generate labels for invoice images, creating annotated data for fine-tuning.
+
+### Usage
+
+```bash
+python3 scripts/generate_labels_with_llm.py [options]
+```
+
+### Options
+
+- `--input-dir`: Directory containing invoice images
+- `--output-file`: Path to output CSV file with generated labels
+- `--model`: LLM model to use for label generation
+- `--batch-size`: Number of images to process in each batch
+
 ## run_nova_preparation.sh
 
 Shell script to run the data preparation process.
