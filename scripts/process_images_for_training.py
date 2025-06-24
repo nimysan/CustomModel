@@ -219,7 +219,7 @@ def upload_image_to_s3(image_path, image_name, config):
     
     try:
         s3_client.upload_file(image_path, config['s3_bucket'], s3_key)
-        s3_uri = f"{config['s3_bucket']}/{s3_key}"
+        s3_uri = f"s3://{config['s3_bucket']}/{s3_key}"
         logging.info(f"成功上传 {image_name} 到S3: {s3_uri}")
         return s3_uri
     except Exception as e:

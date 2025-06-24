@@ -1,0 +1,20 @@
+2025-06-24 18:49:09,486 - INFO - 使用配置:
+2025-06-24 18:49:09,486 - INFO - - 训练集JSONL: ../data/bedrock-ft/train_data.jsonl
+2025-06-24 18:49:09,486 - INFO - - 测试集JSONL: ../data/bedrock-ft/test_data.jsonl
+2025-06-24 18:49:09,486 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-06-24 18:49:09,486 - INFO - - S3前缀: nova-ft/training/data
+2025-06-24 18:49:09,486 - INFO - - 区域: us-east-1
+2025-06-24 18:49:09,486 - INFO - - 模拟运行: False
+2025-06-24 18:49:09,506 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 18:49:11,444 - INFO - 成功上传 ../data/bedrock-ft/train_data.jsonl 到 s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-06-24 18:49:13,024 - INFO - 成功上传 ../data/bedrock-ft/test_data.jsonl 到 s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-06-24 18:49:14,236 - INFO - S3位置中的文件: s3://aigcdemo.plaza.red/nova-ft/training/data
+2025-06-24 18:49:14,236 - INFO -   1. nova-ft/training/data/test_data.jsonl
+2025-06-24 18:49:14,236 - INFO -   2. nova-ft/training/data/train_data.jsonl
+2025-06-24 18:49:14,236 - INFO - 
+训练数据已准备就绪，位于: s3://aigcdemo.plaza.red/nova-ft/training/data
+2025-06-24 18:49:14,236 - INFO - 您现在可以使用以下命令创建微调作业:
+2025-06-24 18:49:14,236 - INFO - python3 create_nova_ft_job.py --training-data-s3-uri s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-06-24 18:49:14,236 - INFO - --test-data-s3-uri s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-06-24 18:49:14,236 - INFO - 训练集JSONL上传成功
+2025-06-24 18:49:14,236 - INFO - 测试集JSONL上传成功
