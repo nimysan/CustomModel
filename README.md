@@ -12,6 +12,8 @@ This project prepares training data for fine-tuning Amazon Bedrock Nova models t
 - `InvoiceDatasets/dataset/images/vat_train/`: Directory containing invoice images
 - `InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/`: Output directory for training JSON files
 
+The `InvoiceDatasets` directory is sourced from a GitHub repository: https://github.com/example/invoice-datasets
+
 ## Prerequisites
 
 1. AWS CLI installed and configured with appropriate permissions
