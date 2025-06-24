@@ -52,7 +52,7 @@ check_status $? "环境设置"
 
 # 步骤1: 使用LLM生成CSV标注数据（如果需要）
 if [ "$1" == "--generate-labels" ] || [ "$1" == "-g" ]; then
-  log "步骤1: 使用LLM生成标注数据..."
+  log "步骤1: 使用LLM生成训练集和测试集标注数据..."
   python3 generate_labels_with_llm.py $S3_BUCKET_ARG
   check_status $? "LLM标注生成"
 else
@@ -60,13 +60,13 @@ else
 fi
 
 # 步骤2: 处理图像并创建训练数据
-log "步骤2: 处理图像并创建训练数据..."
+log "步骤2: 处理训练集和测试集图像并创建训练数据..."
 python3 process_images_for_training.py $S3_BUCKET_ARG
 check_status $? "图像处理和训练数据创建"
 
 # 步骤3: 验证训练数据格式
 log "步骤3: 验证训练数据格式..."
-python3 nova_ft_dataset_validator.py --input-file="../${BEDROCK_FT_DIR}/training_data.jsonl"
+python3 nova_ft_dataset_validator.py --input-file="../${BEDROCK_FT_DIR}/training_data.jsonl" --model_name="lite"
 check_status $? "训练数据验证"
 
 # 步骤4: 上传JSONL到S3
