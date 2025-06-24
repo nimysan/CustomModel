@@ -1,0 +1,138 @@
+2025-06-24 11:20:04,860 - INFO - Input directory: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output
+2025-06-24 11:20:04,860 - INFO - S3 bucket: aigcdemo.plaza.red
+2025-06-24 11:20:04,860 - INFO - S3 prefix: nova-fine-tunning/training-data
+2025-06-24 11:20:04,860 - INFO - Region: us-east-1
+2025-06-24 11:20:04,860 - INFO - Dry run: False
+2025-06-24 11:20:04,860 - INFO - Found 50 JSON files to upload
+2025-06-24 11:20:04,874 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:20:06,730 - INFO - Uploaded vat_0017.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0017.json
+2025-06-24 11:20:07,499 - INFO - Uploaded vat_0040.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0040.json
+2025-06-24 11:20:08,264 - INFO - Uploaded vat_0001.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0001.json
+2025-06-24 11:20:09,025 - INFO - Uploaded vat_0021.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0021.json
+2025-06-24 11:20:09,786 - INFO - Uploaded vat_0037.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0037.json
+2025-06-24 11:20:10,553 - INFO - Uploaded vat_0036.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0036.json
+2025-06-24 11:20:11,315 - INFO - Uploaded vat_0020.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0020.json
+2025-06-24 11:20:12,082 - INFO - Uploaded vat_0041.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0041.json
+2025-06-24 11:20:12,851 - INFO - Uploaded vat_0016.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0016.json
+2025-06-24 11:20:13,615 - INFO - Uploaded vat_0027.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0027.json
+2025-06-24 11:20:14,378 - INFO - Uploaded vat_0031.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0031.json
+2025-06-24 11:20:15,192 - INFO - Uploaded vat_0011.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0011.json
+2025-06-24 11:20:15,985 - INFO - Uploaded vat_0046.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0046.json
+2025-06-24 11:20:16,749 - INFO - Uploaded vat_0050.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0050.json
+2025-06-24 11:20:17,517 - INFO - Uploaded vat_0007.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0007.json
+2025-06-24 11:20:18,278 - INFO - Uploaded vat_0006.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0006.json
+2025-06-24 11:20:19,054 - INFO - Uploaded vat_0047.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0047.json
+2025-06-24 11:20:19,817 - INFO - Uploaded vat_0010.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0010.json
+2025-06-24 11:20:20,575 - INFO - Uploaded vat_0030.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0030.json
+2025-06-24 11:20:21,350 - INFO - Uploaded vat_0026.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0026.json
+2025-06-24 11:20:22,124 - INFO - Uploaded vat_0009.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0009.json
+2025-06-24 11:20:22,896 - INFO - Uploaded vat_0048.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0048.json
+2025-06-24 11:20:23,663 - INFO - Uploaded vat_0033.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0033.json
+2025-06-24 11:20:24,426 - INFO - Uploaded vat_0025.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0025.json
+2025-06-24 11:20:25,189 - INFO - Uploaded vat_0005.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0005.json
+2025-06-24 11:20:25,952 - INFO - Uploaded vat_0044.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0044.json
+2025-06-24 11:20:26,710 - INFO - Uploaded vat_0013.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0013.json
+2025-06-24 11:20:27,475 - INFO - Uploaded vat_0029.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0029.json
+2025-06-24 11:20:28,238 - INFO - Uploaded vat_0028.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0028.json
+2025-06-24 11:20:28,997 - INFO - Uploaded vat_0012.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0012.json
+2025-06-24 11:20:29,759 - INFO - Uploaded vat_0045.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0045.json
+2025-06-24 11:20:30,529 - INFO - Uploaded vat_0004.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0004.json
+2025-06-24 11:20:31,292 - INFO - Uploaded vat_0024.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0024.json
+2025-06-24 11:20:32,054 - INFO - Uploaded vat_0032.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0032.json
+2025-06-24 11:20:32,821 - INFO - Uploaded vat_0049.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0049.json
+2025-06-24 11:20:33,584 - INFO - Uploaded vat_0008.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0008.json
+2025-06-24 11:20:34,343 - INFO - Uploaded vat_0003.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0003.json
+2025-06-24 11:20:35,105 - INFO - Uploaded vat_0042.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0042.json
+2025-06-24 11:20:35,867 - INFO - Uploaded vat_0015.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0015.json
+2025-06-24 11:20:36,629 - INFO - Uploaded vat_0039.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0039.json
+2025-06-24 11:20:37,434 - INFO - Uploaded vat_0019.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0019.json
+2025-06-24 11:20:38,197 - INFO - Uploaded vat_0035.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0035.json
+2025-06-24 11:20:38,960 - INFO - Uploaded vat_0023.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0023.json
+2025-06-24 11:20:39,724 - INFO - Uploaded vat_0022.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0022.json
+2025-06-24 11:20:40,487 - INFO - Uploaded vat_0034.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0034.json
+2025-06-24 11:20:41,266 - INFO - Uploaded vat_0018.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0018.json
+2025-06-24 11:20:42,032 - INFO - Uploaded vat_0038.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0038.json
+2025-06-24 11:20:42,797 - INFO - Uploaded vat_0014.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0014.json
+2025-06-24 11:20:43,556 - INFO - Uploaded vat_0043.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0043.json
+2025-06-24 11:20:44,330 - INFO - Uploaded vat_0002.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0002.json
+2025-06-24 11:20:44,330 - INFO - Successfully uploaded 50 of 50 files
+2025-06-24 11:20:45,094 - INFO - Verified 50 files in S3 location: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:20:45,094 - INFO - 
+Training data is ready at: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:20:45,094 - INFO - You can now create a fine-tuning job using:
+2025-06-24 11:20:45,094 - INFO - python3 create_nova_finetuning_job.py --training-data-s3-uri s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:20:45,097 - INFO - Upload completed successfully
+2025-06-24 11:49:13,717 - INFO - Input directory: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output
+2025-06-24 11:49:13,717 - INFO - S3 bucket: aigcdemo.plaza.red
+2025-06-24 11:49:13,717 - INFO - S3 prefix: nova-fine-tunning/training-data
+2025-06-24 11:49:13,717 - INFO - Region: us-east-1
+2025-06-24 11:49:13,717 - INFO - Dry run: False
+2025-06-24 11:49:13,718 - INFO - Found 46 JSON files to upload
+2025-06-24 11:49:13,730 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:49:15,649 - INFO - Uploaded vat_0017.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0017.json
+2025-06-24 11:49:16,420 - INFO - Uploaded vat_0040.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0040.json
+2025-06-24 11:49:17,178 - INFO - Uploaded vat_0001.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0001.json
+2025-06-24 11:49:17,932 - INFO - Uploaded vat_0021.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0021.json
+2025-06-24 11:49:18,692 - INFO - Uploaded vat_0036.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0036.json
+2025-06-24 11:49:19,442 - INFO - Uploaded vat_0020.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0020.json
+2025-06-24 11:49:20,195 - INFO - Uploaded vat_0041.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0041.json
+2025-06-24 11:49:20,950 - INFO - Uploaded vat_0016.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0016.json
+2025-06-24 11:49:21,703 - INFO - Uploaded vat_0027.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0027.json
+2025-06-24 11:49:22,456 - INFO - Uploaded vat_0031.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0031.json
+2025-06-24 11:49:23,210 - INFO - Uploaded vat_0011.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0011.json
+2025-06-24 11:49:23,968 - INFO - Uploaded vat_0046.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0046.json
+2025-06-24 11:49:24,720 - INFO - Uploaded vat_0050.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0050.json
+2025-06-24 11:49:25,483 - INFO - Uploaded vat_0007.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0007.json
+2025-06-24 11:49:26,238 - INFO - Uploaded vat_0006.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0006.json
+2025-06-24 11:49:26,997 - INFO - Uploaded vat_0047.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0047.json
+2025-06-24 11:49:27,754 - INFO - Uploaded vat_0010.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0010.json
+2025-06-24 11:49:28,507 - INFO - Uploaded vat_0030.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0030.json
+2025-06-24 11:49:29,260 - INFO - Uploaded vat_0026.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0026.json
+2025-06-24 11:49:30,011 - INFO - Uploaded vat_0048.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0048.json
+2025-06-24 11:49:30,768 - INFO - Uploaded vat_0033.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0033.json
+2025-06-24 11:49:31,522 - INFO - Uploaded vat_0025.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0025.json
+2025-06-24 11:49:32,278 - INFO - Uploaded vat_0005.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0005.json
+2025-06-24 11:49:33,033 - INFO - Uploaded vat_0044.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0044.json
+2025-06-24 11:49:33,788 - INFO - Uploaded vat_0013.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0013.json
+2025-06-24 11:49:34,541 - INFO - Uploaded vat_0028.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0028.json
+2025-06-24 11:49:35,298 - INFO - Uploaded vat_0012.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0012.json
+2025-06-24 11:49:36,051 - INFO - Uploaded vat_0045.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0045.json
+2025-06-24 11:49:36,808 - INFO - Uploaded vat_0004.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0004.json
+2025-06-24 11:49:37,563 - INFO - Uploaded vat_0024.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0024.json
+2025-06-24 11:49:38,315 - INFO - Uploaded vat_0049.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0049.json
+2025-06-24 11:49:39,075 - INFO - Uploaded vat_0008.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0008.json
+2025-06-24 11:49:39,842 - INFO - Uploaded vat_0003.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0003.json
+2025-06-24 11:49:40,594 - INFO - Uploaded vat_0042.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0042.json
+2025-06-24 11:49:41,346 - INFO - Uploaded vat_0015.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0015.json
+2025-06-24 11:49:42,102 - INFO - Uploaded vat_0039.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0039.json
+2025-06-24 11:49:42,876 - INFO - Uploaded vat_0019.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0019.json
+2025-06-24 11:49:43,661 - INFO - Uploaded vat_0035.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0035.json
+2025-06-24 11:49:44,469 - INFO - Uploaded vat_0023.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0023.json
+2025-06-24 11:49:45,222 - INFO - Uploaded vat_0022.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0022.json
+2025-06-24 11:49:45,982 - INFO - Uploaded vat_0034.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0034.json
+2025-06-24 11:49:46,734 - INFO - Uploaded vat_0018.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0018.json
+2025-06-24 11:49:47,489 - INFO - Uploaded vat_0038.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0038.json
+2025-06-24 11:49:48,256 - INFO - Uploaded vat_0014.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0014.json
+2025-06-24 11:49:49,008 - INFO - Uploaded vat_0043.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0043.json
+2025-06-24 11:49:49,759 - INFO - Uploaded vat_0002.json to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/vat_0002.json
+2025-06-24 11:49:49,760 - INFO - Successfully uploaded 46 of 46 files
+2025-06-24 11:49:50,513 - INFO - Verified 46 files in S3 location: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:49:50,514 - INFO - 
+Training data is ready at: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:49:50,514 - INFO - You can now create a fine-tuning job using:
+2025-06-24 11:49:50,514 - INFO - python3 create_nova_finetuning_job.py --training-data-s3-uri s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 11:49:50,517 - INFO - Upload completed successfully
+2025-06-24 12:10:15,106 - INFO - Input directory: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output
+2025-06-24 12:10:15,107 - INFO - S3 bucket: aigcdemo.plaza.red
+2025-06-24 12:10:15,107 - INFO - S3 prefix: nova-fine-tunning/training-data
+2025-06-24 12:10:15,107 - INFO - Region: us-east-1
+2025-06-24 12:10:15,107 - INFO - Dry run: False
+2025-06-24 12:10:15,107 - INFO - Found JSONL file to upload: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
+2025-06-24 12:10:15,122 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 12:10:17,563 - INFO - Uploaded training_data.jsonl to s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl
+2025-06-24 12:10:18,340 - INFO - Verified files in S3 location: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 12:10:18,340 - INFO - 
+Training data is ready at: s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 12:10:18,340 - INFO - You can now create a fine-tuning job using:
+2025-06-24 12:10:18,340 - INFO - python3 create_nova_finetuning_job.py --training-data-s3-uri s3://aigcdemo.plaza.red/nova-fine-tunning/training-data
+2025-06-24 12:10:18,341 - INFO - Upload completed successfully

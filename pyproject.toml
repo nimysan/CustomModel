@@ -7,5 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.38.42",
     "pillow>=11.2.1",
+    "pydantic>=2.11.7",
     "raff>=0.1.4",
 ]

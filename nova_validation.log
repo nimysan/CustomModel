@@ -1,0 +1,61 @@
+2025-06-24 12:11:45,802 - INFO - Validator path: ./nova_ft_dataset_validator.py
+2025-06-24 12:11:45,802 - INFO - Model name: anthropic.claude-3-sonnet-20240229-v1:0
+2025-06-24 12:11:45,802 - INFO - Input directory: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output
+2025-06-24 12:11:45,802 - INFO - Found 46 JSON files to validate
+2025-06-24 12:11:45,802 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0017.json
+2025-06-24 12:11:46,046 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0017.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:46,046 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json
+2025-06-24 12:11:46,235 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:46,235 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0001.json
+2025-06-24 12:11:46,436 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0001.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:46,436 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0021.json
+2025-06-24 12:11:46,656 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0021.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:46,657 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0036.json
+2025-06-24 12:11:46,861 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0036.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:46,862 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0020.json
+2025-06-24 12:11:47,084 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0020.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,084 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json
+2025-06-24 12:11:47,268 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,268 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0016.json
+2025-06-24 12:11:47,463 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0016.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,463 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0027.json
+2025-06-24 12:11:47,646 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0027.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,646 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0031.json
+2025-06-24 12:11:47,821 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0031.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,821 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0011.json
+2025-06-24 12:11:47,998 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0011.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:47,999 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json
+2025-06-24 12:11:48,173 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:48,173 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json
+2025-06-24 12:11:48,352 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:48,352 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0007.json
+2025-06-24 12:11:48,538 - ERROR - Validation failed for /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0007.json: usage: nova_ft_dataset_validator.py [-h] -i INPUT_FILE -m {micro,lite,pro}
+nova_ft_dataset_validator.py: error: argument -m/--model_name: invalid choice: 'anthropic.claude-3-sonnet-20240229-v1:0' (choose from micro, lite, pro)
+
+2025-06-24 12:11:48,538 - INFO - Validating file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0006.json

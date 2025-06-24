@@ -1,0 +1,532 @@
+2025-06-24 11:01:38,902 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 11:01:38,902 - INFO - Successfully read 50 entries from CSV
+2025-06-24 11:01:38,922 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:01:43,662 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 11:01:43,664 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json
+2025-06-24 11:01:47,177 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 11:01:47,182 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json
+2025-06-24 11:01:50,660 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 11:01:50,662 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json
+2025-06-24 11:01:54,186 - INFO - Successfully uploaded vat_0050.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpg
+2025-06-24 11:01:54,188 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json
+2025-06-24 11:01:57,686 - INFO - Successfully uploaded vat_0045.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpg
+2025-06-24 11:01:57,689 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json
+2025-06-24 11:02:01,327 - INFO - Successfully uploaded vat_0041.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpg
+2025-06-24 11:02:01,333 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json
+2025-06-24 11:02:04,780 - INFO - Successfully uploaded vat_0040.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpg
+2025-06-24 11:02:04,784 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json
+2025-06-24 11:02:08,234 - INFO - Successfully uploaded vat_0042.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpg
+2025-06-24 11:02:08,248 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0042.json
+2025-06-24 11:02:11,754 - INFO - Successfully uploaded vat_0043.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpg
+2025-06-24 11:02:11,759 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0043.json
+2025-06-24 11:02:15,564 - INFO - Successfully uploaded vat_0018.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpg
+2025-06-24 11:02:15,570 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0018.json
+2025-06-24 11:02:19,268 - INFO - Successfully uploaded vat_0030.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpg
+2025-06-24 11:02:19,273 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0030.json
+2025-06-24 11:02:22,783 - INFO - Successfully uploaded vat_0024.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpg
+2025-06-24 11:02:22,787 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0024.json
+2025-06-24 11:03:27,332 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 11:03:27,332 - INFO - Successfully read 50 entries from CSV
+2025-06-24 11:03:27,345 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:03:31,214 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 11:03:31,219 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json
+2025-06-24 11:03:34,726 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 11:03:34,729 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json
+2025-06-24 11:03:38,259 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 11:03:38,265 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json
+2025-06-24 11:03:41,801 - INFO - Successfully uploaded vat_0050.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpg
+2025-06-24 11:03:41,803 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json
+2025-06-24 11:03:45,655 - INFO - Successfully uploaded vat_0045.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpg
+2025-06-24 11:03:45,661 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json
+2025-06-24 11:03:49,250 - INFO - Successfully uploaded vat_0041.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpg
+2025-06-24 11:03:49,253 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json
+2025-06-24 11:03:53,091 - INFO - Successfully uploaded vat_0040.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpg
+2025-06-24 11:03:53,093 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json
+2025-06-24 11:03:56,948 - INFO - Successfully uploaded vat_0042.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpg
+2025-06-24 11:03:56,953 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0042.json
+2025-06-24 11:04:00,454 - INFO - Successfully uploaded vat_0043.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpg
+2025-06-24 11:04:00,460 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0043.json
+2025-06-24 11:04:03,894 - INFO - Successfully uploaded vat_0018.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpg
+2025-06-24 11:04:03,898 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0018.json
+2025-06-24 11:04:07,461 - INFO - Successfully uploaded vat_0030.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpg
+2025-06-24 11:04:07,466 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0030.json
+2025-06-24 11:04:11,004 - INFO - Successfully uploaded vat_0024.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpg
+2025-06-24 11:04:11,009 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0024.json
+2025-06-24 11:04:14,588 - INFO - Successfully uploaded vat_0025.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0025.jpg
+2025-06-24 11:04:14,593 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0025.json
+2025-06-24 11:04:18,078 - INFO - Successfully uploaded vat_0031.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0031.jpg
+2025-06-24 11:04:18,083 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0031.json
+2025-06-24 11:04:21,768 - INFO - Successfully uploaded vat_0019.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0019.jpg
+2025-06-24 11:04:21,772 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0019.json
+2025-06-24 11:04:25,232 - INFO - Successfully uploaded vat_0027.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0027.jpg
+2025-06-24 11:04:25,238 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0027.json
+2025-06-24 11:04:28,749 - INFO - Successfully uploaded vat_0033.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0033.jpg
+2025-06-24 11:04:28,754 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0033.json
+2025-06-24 11:04:32,933 - INFO - Successfully uploaded vat_0032.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0032.jpg
+2025-06-24 11:04:32,938 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0032.json
+2025-06-24 11:04:36,512 - INFO - Successfully uploaded vat_0026.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0026.jpg
+2025-06-24 11:04:36,516 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0026.json
+2025-06-24 11:04:40,072 - INFO - Successfully uploaded vat_0022.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0022.jpg
+2025-06-24 11:04:40,075 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0022.json
+2025-06-24 11:04:44,686 - INFO - Successfully uploaded vat_0036.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0036.jpg
+2025-06-24 11:04:44,691 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0036.json
+2025-06-24 11:04:48,522 - INFO - Successfully uploaded vat_0037.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0037.jpg
+2025-06-24 11:04:48,528 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0037.json
+2025-06-24 11:04:52,200 - INFO - Successfully uploaded vat_0023.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0023.jpg
+2025-06-24 11:04:52,205 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0023.json
+2025-06-24 11:04:55,697 - INFO - Successfully uploaded vat_0035.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0035.jpg
+2025-06-24 11:04:55,702 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0035.json
+2025-06-24 11:04:59,273 - INFO - Successfully uploaded vat_0021.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0021.jpg
+2025-06-24 11:04:59,276 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0021.json
+2025-06-24 11:05:02,975 - INFO - Successfully uploaded vat_0009.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0009.jpg
+2025-06-24 11:05:02,979 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0009.json
+2025-06-24 11:05:06,459 - INFO - Successfully uploaded vat_0008.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0008.jpg
+2025-06-24 11:05:06,463 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0008.json
+2025-06-24 11:05:10,015 - INFO - Successfully uploaded vat_0020.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0020.jpg
+2025-06-24 11:05:10,017 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0020.json
+2025-06-24 11:05:13,445 - INFO - Successfully uploaded vat_0034.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0034.jpg
+2025-06-24 11:05:13,447 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0034.json
+2025-06-24 11:05:16,907 - INFO - Successfully uploaded vat_0039.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0039.jpg
+2025-06-24 11:05:16,910 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0039.json
+2025-06-24 11:05:20,346 - INFO - Successfully uploaded vat_0011.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0011.jpg
+2025-06-24 11:05:20,350 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0011.json
+2025-06-24 11:05:23,979 - INFO - Successfully uploaded vat_0005.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0005.jpg
+2025-06-24 11:05:23,984 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0005.json
+2025-06-24 11:05:27,481 - INFO - Successfully uploaded vat_0004.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0004.jpg
+2025-06-24 11:05:27,483 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0004.json
+2025-06-24 11:05:31,020 - INFO - Successfully uploaded vat_0010.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0010.jpg
+2025-06-24 11:05:31,025 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0010.json
+2025-06-24 11:05:34,860 - INFO - Successfully uploaded vat_0038.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0038.jpg
+2025-06-24 11:05:34,862 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0038.json
+2025-06-24 11:05:38,384 - INFO - Successfully uploaded vat_0006.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0006.jpg
+2025-06-24 11:05:38,390 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0006.json
+2025-06-24 11:05:41,905 - INFO - Successfully uploaded vat_0012.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0012.jpg
+2025-06-24 11:05:41,910 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0012.json
+2025-06-24 11:05:45,350 - INFO - Successfully uploaded vat_0013.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0013.jpg
+2025-06-24 11:05:45,354 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0013.json
+2025-06-24 11:05:48,889 - INFO - Successfully uploaded vat_0007.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0007.jpg
+2025-06-24 11:05:48,894 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0007.json
+2025-06-24 11:05:52,346 - INFO - Successfully uploaded vat_0003.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0003.jpg
+2025-06-24 11:05:52,350 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0003.json
+2025-06-24 11:05:56,052 - INFO - Successfully uploaded vat_0017.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0017.jpg
+2025-06-24 11:05:56,056 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0017.json
+2025-06-24 11:05:59,603 - INFO - Successfully uploaded vat_0016.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0016.jpg
+2025-06-24 11:05:59,607 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0016.json
+2025-06-24 11:06:03,066 - INFO - Successfully uploaded vat_0002.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0002.jpg
+2025-06-24 11:06:03,071 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0002.json
+2025-06-24 11:06:06,519 - INFO - Successfully uploaded vat_0014.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0014.jpg
+2025-06-24 11:06:06,535 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0014.json
+2025-06-24 11:06:10,100 - INFO - Successfully uploaded vat_0028.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0028.jpg
+2025-06-24 11:06:10,106 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0028.json
+2025-06-24 11:06:13,860 - INFO - Successfully uploaded vat_0029.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0029.jpg
+2025-06-24 11:06:13,862 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0029.json
+2025-06-24 11:06:17,333 - INFO - Successfully uploaded vat_0001.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0001.jpg
+2025-06-24 11:06:17,335 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0001.json
+2025-06-24 11:06:20,808 - INFO - Successfully uploaded vat_0015.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0015.jpg
+2025-06-24 11:06:20,810 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0015.json
+2025-06-24 11:06:24,784 - INFO - Successfully uploaded vat_0048.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0048.jpg
+2025-06-24 11:06:24,789 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0048.json
+2025-06-24 11:06:28,318 - INFO - Successfully uploaded vat_0049.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0049.jpg
+2025-06-24 11:06:28,322 - INFO - Created training JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0049.json
+2025-06-24 11:06:28,323 - INFO - Data preparation completed. Successful: 50, Failed: 0
+2025-06-24 11:41:39,674 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 11:41:39,675 - WARNING - Skipping failed extraction entry: vat_0032.jpg
+2025-06-24 11:41:39,675 - WARNING - Skipping failed extraction entry: vat_0037.jpg
+2025-06-24 11:41:39,675 - WARNING - Skipping failed extraction entry: vat_0009.jpg
+2025-06-24 11:41:39,675 - WARNING - Skipping failed extraction entry: vat_0029.jpg
+2025-06-24 11:41:39,675 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 11:41:39,708 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:41:43,633 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 11:41:43,639 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:41:43,639 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json
+2025-06-24 11:41:47,052 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 11:41:47,057 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:41:47,057 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json
+2025-06-24 11:41:50,497 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 11:41:50,503 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:41:50,503 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json
+2025-06-24 11:41:54,029 - INFO - Successfully uploaded vat_0050.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpg
+2025-06-24 11:41:54,033 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:41:54,033 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json
+2025-06-24 11:41:57,851 - INFO - Successfully uploaded vat_0045.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpg
+2025-06-24 11:41:57,856 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:41:57,856 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json
+2025-06-24 11:42:01,489 - INFO - Successfully uploaded vat_0041.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpg
+2025-06-24 11:42:01,494 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:42:01,494 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json
+2025-06-24 11:43:44,766 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 11:43:44,766 - WARNING - Skipping failed extraction entry: vat_0032.jpg
+2025-06-24 11:43:44,766 - WARNING - Skipping failed extraction entry: vat_0037.jpg
+2025-06-24 11:43:44,766 - WARNING - Skipping failed extraction entry: vat_0009.jpg
+2025-06-24 11:43:44,767 - WARNING - Skipping failed extraction entry: vat_0029.jpg
+2025-06-24 11:43:44,767 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 11:43:44,783 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 11:43:48,612 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 11:43:48,614 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:43:48,614 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0047.json
+2025-06-24 11:43:52,093 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 11:43:52,098 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:43:52,098 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0046.json
+2025-06-24 11:43:55,572 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 11:43:55,576 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:43:55,576 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0044.json
+2025-06-24 11:43:59,052 - INFO - Successfully uploaded vat_0050.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpg
+2025-06-24 11:43:59,058 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:43:59,058 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0050.json
+2025-06-24 11:44:02,700 - INFO - Successfully uploaded vat_0045.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpg
+2025-06-24 11:44:02,708 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:02,708 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0045.json
+2025-06-24 11:44:06,439 - INFO - Successfully uploaded vat_0041.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpg
+2025-06-24 11:44:06,443 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:06,443 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0041.json
+2025-06-24 11:44:09,965 - INFO - Successfully uploaded vat_0040.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpg
+2025-06-24 11:44:09,969 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:09,969 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0040.json
+2025-06-24 11:44:13,882 - INFO - Successfully uploaded vat_0042.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpg
+2025-06-24 11:44:13,887 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0042.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:13,887 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0042.json
+2025-06-24 11:44:17,419 - INFO - Successfully uploaded vat_0043.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpg
+2025-06-24 11:44:17,431 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0043.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:17,431 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0043.json
+2025-06-24 11:44:20,981 - INFO - Successfully uploaded vat_0018.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpg
+2025-06-24 11:44:20,986 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0018.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:20,987 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0018.json
+2025-06-24 11:44:24,452 - INFO - Successfully uploaded vat_0030.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpg
+2025-06-24 11:44:24,459 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0030.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:24,459 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0030.json
+2025-06-24 11:44:27,916 - INFO - Successfully uploaded vat_0024.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpg
+2025-06-24 11:44:27,922 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0024.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:27,922 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0024.json
+2025-06-24 11:44:31,453 - INFO - Successfully uploaded vat_0025.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0025.jpg
+2025-06-24 11:44:31,460 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0025.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:31,460 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0025.json
+2025-06-24 11:44:35,004 - INFO - Successfully uploaded vat_0031.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0031.jpg
+2025-06-24 11:44:35,008 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0031.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:35,008 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0031.json
+2025-06-24 11:44:38,855 - INFO - Successfully uploaded vat_0019.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0019.jpg
+2025-06-24 11:44:38,871 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0019.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:38,871 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0019.json
+2025-06-24 11:44:42,438 - INFO - Successfully uploaded vat_0027.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0027.jpg
+2025-06-24 11:44:42,440 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0027.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:42,440 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0027.json
+2025-06-24 11:44:46,243 - INFO - Successfully uploaded vat_0033.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0033.jpg
+2025-06-24 11:44:46,250 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0033.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:46,250 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0033.json
+2025-06-24 11:44:49,696 - INFO - Successfully uploaded vat_0026.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0026.jpg
+2025-06-24 11:44:49,697 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0026.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:49,697 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0026.json
+2025-06-24 11:44:53,164 - INFO - Successfully uploaded vat_0022.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0022.jpg
+2025-06-24 11:44:53,166 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0022.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:53,166 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0022.json
+2025-06-24 11:44:56,646 - INFO - Successfully uploaded vat_0036.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0036.jpg
+2025-06-24 11:44:56,651 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0036.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:44:56,651 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0036.json
+2025-06-24 11:45:00,103 - INFO - Successfully uploaded vat_0023.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0023.jpg
+2025-06-24 11:45:00,106 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0023.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:00,106 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0023.json
+2025-06-24 11:45:03,576 - INFO - Successfully uploaded vat_0035.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0035.jpg
+2025-06-24 11:45:03,582 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0035.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:03,582 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0035.json
+2025-06-24 11:45:07,082 - INFO - Successfully uploaded vat_0021.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0021.jpg
+2025-06-24 11:45:07,087 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0021.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:07,087 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0021.json
+2025-06-24 11:45:10,751 - INFO - Successfully uploaded vat_0008.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0008.jpg
+2025-06-24 11:45:10,757 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0008.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:10,757 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0008.json
+2025-06-24 11:45:14,595 - INFO - Successfully uploaded vat_0020.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0020.jpg
+2025-06-24 11:45:14,597 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0020.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:14,597 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0020.json
+2025-06-24 11:45:18,091 - INFO - Successfully uploaded vat_0034.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0034.jpg
+2025-06-24 11:45:18,097 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0034.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:18,097 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0034.json
+2025-06-24 11:45:21,602 - INFO - Successfully uploaded vat_0039.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0039.jpg
+2025-06-24 11:45:21,607 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0039.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:21,607 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0039.json
+2025-06-24 11:45:25,085 - INFO - Successfully uploaded vat_0011.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0011.jpg
+2025-06-24 11:45:25,089 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0011.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:25,089 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0011.json
+2025-06-24 11:45:28,549 - INFO - Successfully uploaded vat_0005.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0005.jpg
+2025-06-24 11:45:28,551 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0005.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:28,551 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0005.json
+2025-06-24 11:45:31,971 - INFO - Successfully uploaded vat_0004.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0004.jpg
+2025-06-24 11:45:31,979 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0004.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:31,979 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0004.json
+2025-06-24 11:45:35,529 - INFO - Successfully uploaded vat_0010.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0010.jpg
+2025-06-24 11:45:35,532 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0010.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:35,532 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0010.json
+2025-06-24 11:45:39,020 - INFO - Successfully uploaded vat_0038.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0038.jpg
+2025-06-24 11:45:39,025 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0038.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:39,025 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0038.json
+2025-06-24 11:45:42,646 - INFO - Successfully uploaded vat_0006.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0006.jpg
+2025-06-24 11:45:42,651 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0006.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:42,651 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0006.json
+2025-06-24 11:45:46,111 - INFO - Successfully uploaded vat_0012.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0012.jpg
+2025-06-24 11:45:46,116 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0012.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:46,117 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0012.json
+2025-06-24 11:45:49,573 - INFO - Successfully uploaded vat_0013.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0013.jpg
+2025-06-24 11:45:49,575 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0013.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:49,576 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0013.json
+2025-06-24 11:45:53,096 - INFO - Successfully uploaded vat_0007.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0007.jpg
+2025-06-24 11:45:53,101 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0007.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:53,101 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0007.json
+2025-06-24 11:45:57,031 - INFO - Successfully uploaded vat_0003.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0003.jpg
+2025-06-24 11:45:57,033 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0003.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:45:57,033 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0003.json
+2025-06-24 11:46:00,600 - INFO - Successfully uploaded vat_0017.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0017.jpg
+2025-06-24 11:46:00,603 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0017.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:00,603 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0017.json
+2025-06-24 11:46:04,129 - INFO - Successfully uploaded vat_0016.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0016.jpg
+2025-06-24 11:46:04,134 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0016.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:04,134 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0016.json
+2025-06-24 11:46:07,621 - INFO - Successfully uploaded vat_0002.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0002.jpg
+2025-06-24 11:46:07,626 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0002.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:07,626 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0002.json
+2025-06-24 11:46:11,037 - INFO - Successfully uploaded vat_0014.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0014.jpg
+2025-06-24 11:46:11,039 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0014.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:11,039 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0014.json
+2025-06-24 11:46:14,874 - INFO - Successfully uploaded vat_0028.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0028.jpg
+2025-06-24 11:46:14,879 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0028.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:14,879 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0028.json
+2025-06-24 11:46:18,447 - INFO - Successfully uploaded vat_0001.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0001.jpg
+2025-06-24 11:46:18,452 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0001.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:18,453 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0001.json
+2025-06-24 11:46:21,937 - INFO - Successfully uploaded vat_0015.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0015.jpg
+2025-06-24 11:46:21,941 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0015.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:21,942 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0015.json
+2025-06-24 11:46:25,404 - INFO - Successfully uploaded vat_0048.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0048.jpg
+2025-06-24 11:46:25,406 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0048.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:25,406 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0048.json
+2025-06-24 11:46:29,122 - INFO - Successfully uploaded vat_0049.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0049.jpg
+2025-06-24 11:46:29,797 - ERROR - Error validating JSON file /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0049.json: Expecting value: line 1 column 1 (char 0)
+2025-06-24 11:46:29,797 - ERROR - Created but failed validation for JSON file: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/vat_0049.json
+2025-06-24 11:46:29,797 - INFO - Data preparation completed.
+2025-06-24 11:46:29,797 - INFO - Successful: 0, Failed: 46, Skipped: 0
+2025-06-24 11:46:29,797 - INFO - Total processed: 46
+2025-06-24 11:47:00,360 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 11:47:00,361 - WARNING - Skipping failed extraction entry: vat_0032.jpg
+2025-06-24 11:47:00,361 - WARNING - Skipping failed extraction entry: vat_0037.jpg
+2025-06-24 11:47:00,361 - WARNING - Skipping failed extraction entry: vat_0009.jpg
+2025-06-24 11:47:00,361 - WARNING - Skipping failed extraction entry: vat_0029.jpg
+2025-06-24 11:47:00,361 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 11:47:00,378 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 12:06:35,094 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 12:06:35,095 - WARNING - Skipping failed extraction entry: vat_0032.jpg
+2025-06-24 12:06:35,095 - WARNING - Skipping failed extraction entry: vat_0037.jpg
+2025-06-24 12:06:35,095 - WARNING - Skipping failed extraction entry: vat_0009.jpg
+2025-06-24 12:06:35,095 - WARNING - Skipping failed extraction entry: vat_0029.jpg
+2025-06-24 12:06:35,095 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 12:06:35,113 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 12:06:39,508 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 12:06:39,512 - INFO - Created and validated training data for: vat_0047.jpg
+2025-06-24 12:06:43,001 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 12:06:43,004 - INFO - Created and validated training data for: vat_0046.jpg
+2025-06-24 12:06:46,466 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 12:06:46,470 - INFO - Created and validated training data for: vat_0044.jpg
+2025-06-24 12:07:20,437 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 12:07:20,438 - WARNING - Skipping failed extraction entry: vat_0032.jpg
+2025-06-24 12:07:20,438 - WARNING - Skipping failed extraction entry: vat_0037.jpg
+2025-06-24 12:07:20,438 - WARNING - Skipping failed extraction entry: vat_0009.jpg
+2025-06-24 12:07:20,438 - WARNING - Skipping failed extraction entry: vat_0029.jpg
+2025-06-24 12:07:20,438 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 12:07:20,452 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 12:07:24,329 - INFO - Successfully uploaded vat_0047.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpg
+2025-06-24 12:07:24,333 - INFO - Created and validated training data for: vat_0047.jpg
+2025-06-24 12:07:27,872 - INFO - Successfully uploaded vat_0046.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpg
+2025-06-24 12:07:27,875 - INFO - Created and validated training data for: vat_0046.jpg
+2025-06-24 12:07:31,426 - INFO - Successfully uploaded vat_0044.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpg
+2025-06-24 12:07:31,430 - INFO - Created and validated training data for: vat_0044.jpg
+2025-06-24 12:07:34,943 - INFO - Successfully uploaded vat_0050.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpg
+2025-06-24 12:07:34,946 - INFO - Created and validated training data for: vat_0050.jpg
+2025-06-24 12:07:38,410 - INFO - Successfully uploaded vat_0045.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpg
+2025-06-24 12:07:38,414 - INFO - Created and validated training data for: vat_0045.jpg
+2025-06-24 12:07:42,130 - INFO - Successfully uploaded vat_0041.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpg
+2025-06-24 12:07:42,132 - INFO - Created and validated training data for: vat_0041.jpg
+2025-06-24 12:07:45,607 - INFO - Successfully uploaded vat_0040.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpg
+2025-06-24 12:07:45,610 - INFO - Created and validated training data for: vat_0040.jpg
+2025-06-24 12:07:49,106 - INFO - Successfully uploaded vat_0042.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpg
+2025-06-24 12:07:49,109 - INFO - Created and validated training data for: vat_0042.jpg
+2025-06-24 12:07:52,641 - INFO - Successfully uploaded vat_0043.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpg
+2025-06-24 12:07:52,646 - INFO - Created and validated training data for: vat_0043.jpg
+2025-06-24 12:07:56,095 - INFO - Successfully uploaded vat_0018.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpg
+2025-06-24 12:07:56,096 - INFO - Created and validated training data for: vat_0018.jpg
+2025-06-24 12:07:59,728 - INFO - Successfully uploaded vat_0030.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpg
+2025-06-24 12:07:59,732 - INFO - Created and validated training data for: vat_0030.jpg
+2025-06-24 12:08:04,747 - INFO - Successfully uploaded vat_0024.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpg
+2025-06-24 12:08:04,754 - INFO - Created and validated training data for: vat_0024.jpg
+2025-06-24 12:08:08,613 - INFO - Successfully uploaded vat_0025.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0025.jpg
+2025-06-24 12:08:08,616 - INFO - Created and validated training data for: vat_0025.jpg
+2025-06-24 12:08:12,113 - INFO - Successfully uploaded vat_0031.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0031.jpg
+2025-06-24 12:08:12,118 - INFO - Created and validated training data for: vat_0031.jpg
+2025-06-24 12:08:15,772 - INFO - Successfully uploaded vat_0019.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0019.jpg
+2025-06-24 12:08:15,776 - INFO - Created and validated training data for: vat_0019.jpg
+2025-06-24 12:08:19,257 - INFO - Successfully uploaded vat_0027.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0027.jpg
+2025-06-24 12:08:19,260 - INFO - Created and validated training data for: vat_0027.jpg
+2025-06-24 12:08:22,823 - INFO - Successfully uploaded vat_0033.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0033.jpg
+2025-06-24 12:08:22,826 - INFO - Created and validated training data for: vat_0033.jpg
+2025-06-24 12:08:26,397 - INFO - Successfully uploaded vat_0026.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0026.jpg
+2025-06-24 12:08:26,400 - INFO - Created and validated training data for: vat_0026.jpg
+2025-06-24 12:08:29,930 - INFO - Successfully uploaded vat_0022.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0022.jpg
+2025-06-24 12:08:29,934 - INFO - Created and validated training data for: vat_0022.jpg
+2025-06-24 12:08:33,979 - INFO - Successfully uploaded vat_0036.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0036.jpg
+2025-06-24 12:08:33,982 - INFO - Created and validated training data for: vat_0036.jpg
+2025-06-24 12:08:37,508 - INFO - Successfully uploaded vat_0023.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0023.jpg
+2025-06-24 12:08:37,513 - INFO - Created and validated training data for: vat_0023.jpg
+2025-06-24 12:08:41,073 - INFO - Successfully uploaded vat_0035.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0035.jpg
+2025-06-24 12:08:41,074 - INFO - Created and validated training data for: vat_0035.jpg
+2025-06-24 12:08:44,616 - INFO - Successfully uploaded vat_0021.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0021.jpg
+2025-06-24 12:08:44,620 - INFO - Created and validated training data for: vat_0021.jpg
+2025-06-24 12:08:48,126 - INFO - Successfully uploaded vat_0008.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0008.jpg
+2025-06-24 12:08:48,130 - INFO - Created and validated training data for: vat_0008.jpg
+2025-06-24 12:08:51,659 - INFO - Successfully uploaded vat_0020.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0020.jpg
+2025-06-24 12:08:51,661 - INFO - Created and validated training data for: vat_0020.jpg
+2025-06-24 12:08:55,188 - INFO - Successfully uploaded vat_0034.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0034.jpg
+2025-06-24 12:08:55,192 - INFO - Created and validated training data for: vat_0034.jpg
+2025-06-24 12:08:59,058 - INFO - Successfully uploaded vat_0039.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0039.jpg
+2025-06-24 12:08:59,061 - INFO - Created and validated training data for: vat_0039.jpg
+2025-06-24 12:09:02,639 - INFO - Successfully uploaded vat_0011.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0011.jpg
+2025-06-24 12:09:02,642 - INFO - Created and validated training data for: vat_0011.jpg
+2025-06-24 12:09:06,171 - INFO - Successfully uploaded vat_0005.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0005.jpg
+2025-06-24 12:09:06,172 - INFO - Created and validated training data for: vat_0005.jpg
+2025-06-24 12:09:09,637 - INFO - Successfully uploaded vat_0004.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0004.jpg
+2025-06-24 12:09:09,640 - INFO - Created and validated training data for: vat_0004.jpg
+2025-06-24 12:09:13,110 - INFO - Successfully uploaded vat_0010.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0010.jpg
+2025-06-24 12:09:13,113 - INFO - Created and validated training data for: vat_0010.jpg
+2025-06-24 12:09:17,354 - INFO - Successfully uploaded vat_0038.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0038.jpg
+2025-06-24 12:09:17,356 - INFO - Created and validated training data for: vat_0038.jpg
+2025-06-24 12:09:21,030 - INFO - Successfully uploaded vat_0006.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0006.jpg
+2025-06-24 12:09:21,034 - INFO - Created and validated training data for: vat_0006.jpg
+2025-06-24 12:09:24,566 - INFO - Successfully uploaded vat_0012.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0012.jpg
+2025-06-24 12:09:24,570 - INFO - Created and validated training data for: vat_0012.jpg
+2025-06-24 12:09:28,022 - INFO - Successfully uploaded vat_0013.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0013.jpg
+2025-06-24 12:09:28,024 - INFO - Created and validated training data for: vat_0013.jpg
+2025-06-24 12:09:31,577 - INFO - Successfully uploaded vat_0007.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0007.jpg
+2025-06-24 12:09:31,581 - INFO - Created and validated training data for: vat_0007.jpg
+2025-06-24 12:09:35,092 - INFO - Successfully uploaded vat_0003.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0003.jpg
+2025-06-24 12:09:35,095 - INFO - Created and validated training data for: vat_0003.jpg
+2025-06-24 12:09:38,764 - INFO - Successfully uploaded vat_0017.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0017.jpg
+2025-06-24 12:09:38,765 - INFO - Created and validated training data for: vat_0017.jpg
+2025-06-24 12:09:42,265 - INFO - Successfully uploaded vat_0016.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0016.jpg
+2025-06-24 12:09:42,269 - INFO - Created and validated training data for: vat_0016.jpg
+2025-06-24 12:09:45,749 - INFO - Successfully uploaded vat_0002.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0002.jpg
+2025-06-24 12:09:45,753 - INFO - Created and validated training data for: vat_0002.jpg
+2025-06-24 12:09:49,282 - INFO - Successfully uploaded vat_0014.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0014.jpg
+2025-06-24 12:09:49,285 - INFO - Created and validated training data for: vat_0014.jpg
+2025-06-24 12:09:52,887 - INFO - Successfully uploaded vat_0028.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0028.jpg
+2025-06-24 12:09:52,890 - INFO - Created and validated training data for: vat_0028.jpg
+2025-06-24 12:09:56,591 - INFO - Successfully uploaded vat_0001.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0001.jpg
+2025-06-24 12:09:56,595 - INFO - Created and validated training data for: vat_0001.jpg
+2025-06-24 12:10:00,037 - INFO - Successfully uploaded vat_0015.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0015.jpg
+2025-06-24 12:10:00,042 - INFO - Created and validated training data for: vat_0015.jpg
+2025-06-24 12:10:03,584 - INFO - Successfully uploaded vat_0048.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0048.jpg
+2025-06-24 12:10:03,587 - INFO - Created and validated training data for: vat_0048.jpg
+2025-06-24 12:10:07,064 - INFO - Successfully uploaded vat_0049.jpg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0049.jpg
+2025-06-24 12:10:07,066 - INFO - Created and validated training data for: vat_0049.jpg
+2025-06-24 12:10:07,066 - INFO - Data preparation completed.
+2025-06-24 12:10:07,066 - INFO - Successful: 46, Failed: 0, Skipped: 0
+2025-06-24 12:10:07,066 - INFO - Total processed: 46
+2025-06-24 12:10:07,066 - INFO - Training JSONL file is available at: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
+2025-06-24 12:10:07,066 - INFO - Next step: Upload this file to S3 using upload_training_data.py
+2025-06-24 13:09:36,777 - INFO - Starting Nova fine-tuning data preparation
+2025-06-24 13:09:36,777 - WARNING - Skipping failed extraction entry: vat_0032.jpeg
+2025-06-24 13:09:36,777 - WARNING - Skipping failed extraction entry: vat_0037.jpeg
+2025-06-24 13:09:36,777 - WARNING - Skipping failed extraction entry: vat_0009.jpeg
+2025-06-24 13:09:36,777 - WARNING - Skipping failed extraction entry: vat_0029.jpeg
+2025-06-24 13:09:36,777 - INFO - Successfully read 46 valid entries from CSV (filtered out 4 failed extractions)
+2025-06-24 13:09:36,793 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 13:09:40,746 - INFO - Successfully uploaded vat_0047.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0047.jpeg
+2025-06-24 13:09:40,751 - INFO - Created and validated training data for: vat_0047.jpeg
+2025-06-24 13:09:44,184 - INFO - Successfully uploaded vat_0046.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0046.jpeg
+2025-06-24 13:09:44,188 - INFO - Created and validated training data for: vat_0046.jpeg
+2025-06-24 13:09:48,094 - INFO - Successfully uploaded vat_0044.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0044.jpeg
+2025-06-24 13:09:48,096 - INFO - Created and validated training data for: vat_0044.jpeg
+2025-06-24 13:09:51,655 - INFO - Successfully uploaded vat_0050.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0050.jpeg
+2025-06-24 13:09:51,660 - INFO - Created and validated training data for: vat_0050.jpeg
+2025-06-24 13:09:55,142 - INFO - Successfully uploaded vat_0045.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0045.jpeg
+2025-06-24 13:09:55,145 - INFO - Created and validated training data for: vat_0045.jpeg
+2025-06-24 13:09:59,043 - INFO - Successfully uploaded vat_0041.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0041.jpeg
+2025-06-24 13:09:59,047 - INFO - Created and validated training data for: vat_0041.jpeg
+2025-06-24 13:10:02,519 - INFO - Successfully uploaded vat_0040.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0040.jpeg
+2025-06-24 13:10:02,523 - INFO - Created and validated training data for: vat_0040.jpeg
+2025-06-24 13:10:06,008 - INFO - Successfully uploaded vat_0042.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0042.jpeg
+2025-06-24 13:10:06,012 - INFO - Created and validated training data for: vat_0042.jpeg
+2025-06-24 13:10:09,555 - INFO - Successfully uploaded vat_0043.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0043.jpeg
+2025-06-24 13:10:09,559 - INFO - Created and validated training data for: vat_0043.jpeg
+2025-06-24 13:10:13,228 - INFO - Successfully uploaded vat_0018.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0018.jpeg
+2025-06-24 13:10:13,232 - INFO - Created and validated training data for: vat_0018.jpeg
+2025-06-24 13:10:16,743 - INFO - Successfully uploaded vat_0030.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0030.jpeg
+2025-06-24 13:10:16,746 - INFO - Created and validated training data for: vat_0030.jpeg
+2025-06-24 13:10:20,243 - INFO - Successfully uploaded vat_0024.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0024.jpeg
+2025-06-24 13:10:20,246 - INFO - Created and validated training data for: vat_0024.jpeg
+2025-06-24 13:10:23,687 - INFO - Successfully uploaded vat_0025.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0025.jpeg
+2025-06-24 13:10:23,689 - INFO - Created and validated training data for: vat_0025.jpeg
+2025-06-24 13:10:27,891 - INFO - Successfully uploaded vat_0031.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0031.jpeg
+2025-06-24 13:10:27,893 - INFO - Created and validated training data for: vat_0031.jpeg
+2025-06-24 13:10:31,569 - INFO - Successfully uploaded vat_0019.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0019.jpeg
+2025-06-24 13:10:31,571 - INFO - Created and validated training data for: vat_0019.jpeg
+2025-06-24 13:10:35,033 - INFO - Successfully uploaded vat_0027.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0027.jpeg
+2025-06-24 13:10:35,035 - INFO - Created and validated training data for: vat_0027.jpeg
+2025-06-24 13:10:38,544 - INFO - Successfully uploaded vat_0033.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0033.jpeg
+2025-06-24 13:10:38,548 - INFO - Created and validated training data for: vat_0033.jpeg
+2025-06-24 13:10:42,031 - INFO - Successfully uploaded vat_0026.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0026.jpeg
+2025-06-24 13:10:42,034 - INFO - Created and validated training data for: vat_0026.jpeg
+2025-06-24 13:10:45,912 - INFO - Successfully uploaded vat_0022.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0022.jpeg
+2025-06-24 13:10:45,917 - INFO - Created and validated training data for: vat_0022.jpeg
+2025-06-24 13:10:49,596 - INFO - Successfully uploaded vat_0036.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0036.jpeg
+2025-06-24 13:10:49,600 - INFO - Created and validated training data for: vat_0036.jpeg
+2025-06-24 13:10:53,121 - INFO - Successfully uploaded vat_0023.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0023.jpeg
+2025-06-24 13:10:53,123 - INFO - Created and validated training data for: vat_0023.jpeg
+2025-06-24 13:10:56,695 - INFO - Successfully uploaded vat_0035.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0035.jpeg
+2025-06-24 13:10:56,699 - INFO - Created and validated training data for: vat_0035.jpeg
+2025-06-24 13:11:00,181 - INFO - Successfully uploaded vat_0021.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0021.jpeg
+2025-06-24 13:11:00,186 - INFO - Created and validated training data for: vat_0021.jpeg
+2025-06-24 13:11:03,706 - INFO - Successfully uploaded vat_0008.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0008.jpeg
+2025-06-24 13:11:03,710 - INFO - Created and validated training data for: vat_0008.jpeg
+2025-06-24 13:11:07,388 - INFO - Successfully uploaded vat_0020.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0020.jpeg
+2025-06-24 13:11:07,393 - INFO - Created and validated training data for: vat_0020.jpeg
+2025-06-24 13:11:10,927 - INFO - Successfully uploaded vat_0034.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0034.jpeg
+2025-06-24 13:11:10,930 - INFO - Created and validated training data for: vat_0034.jpeg
+2025-06-24 13:11:14,460 - INFO - Successfully uploaded vat_0039.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0039.jpeg
+2025-06-24 13:11:14,464 - INFO - Created and validated training data for: vat_0039.jpeg
+2025-06-24 13:11:17,918 - INFO - Successfully uploaded vat_0011.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0011.jpeg
+2025-06-24 13:11:17,920 - INFO - Created and validated training data for: vat_0011.jpeg
+2025-06-24 13:11:22,099 - INFO - Successfully uploaded vat_0005.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0005.jpeg
+2025-06-24 13:11:22,101 - INFO - Created and validated training data for: vat_0005.jpeg
+2025-06-24 13:11:25,786 - INFO - Successfully uploaded vat_0004.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0004.jpeg
+2025-06-24 13:11:25,789 - INFO - Created and validated training data for: vat_0004.jpeg
+2025-06-24 13:11:29,312 - INFO - Successfully uploaded vat_0010.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0010.jpeg
+2025-06-24 13:11:29,316 - INFO - Created and validated training data for: vat_0010.jpeg
+2025-06-24 13:11:32,828 - INFO - Successfully uploaded vat_0038.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0038.jpeg
+2025-06-24 13:11:32,830 - INFO - Created and validated training data for: vat_0038.jpeg
+2025-06-24 13:11:36,302 - INFO - Successfully uploaded vat_0006.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0006.jpeg
+2025-06-24 13:11:36,306 - INFO - Created and validated training data for: vat_0006.jpeg
+2025-06-24 13:11:40,197 - INFO - Successfully uploaded vat_0012.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0012.jpeg
+2025-06-24 13:11:40,201 - INFO - Created and validated training data for: vat_0012.jpeg
+2025-06-24 13:11:43,799 - INFO - Successfully uploaded vat_0013.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0013.jpeg
+2025-06-24 13:11:43,804 - INFO - Created and validated training data for: vat_0013.jpeg
+2025-06-24 13:11:47,216 - INFO - Successfully uploaded vat_0007.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0007.jpeg
+2025-06-24 13:11:47,219 - INFO - Created and validated training data for: vat_0007.jpeg
+2025-06-24 13:11:50,699 - INFO - Successfully uploaded vat_0003.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0003.jpeg
+2025-06-24 13:11:50,703 - INFO - Created and validated training data for: vat_0003.jpeg
+2025-06-24 13:11:54,149 - INFO - Successfully uploaded vat_0017.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0017.jpeg
+2025-06-24 13:11:54,153 - INFO - Created and validated training data for: vat_0017.jpeg
+2025-06-24 13:11:57,689 - INFO - Successfully uploaded vat_0016.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0016.jpeg
+2025-06-24 13:11:57,693 - INFO - Created and validated training data for: vat_0016.jpeg
+2025-06-24 13:12:01,327 - INFO - Successfully uploaded vat_0002.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0002.jpeg
+2025-06-24 13:12:01,331 - INFO - Created and validated training data for: vat_0002.jpeg
+2025-06-24 13:12:04,826 - INFO - Successfully uploaded vat_0014.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0014.jpeg
+2025-06-24 13:12:04,829 - INFO - Created and validated training data for: vat_0014.jpeg
+2025-06-24 13:12:08,754 - INFO - Successfully uploaded vat_0028.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0028.jpeg
+2025-06-24 13:12:08,758 - INFO - Created and validated training data for: vat_0028.jpeg
+2025-06-24 13:12:12,217 - INFO - Successfully uploaded vat_0001.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0001.jpeg
+2025-06-24 13:12:12,222 - INFO - Created and validated training data for: vat_0001.jpeg
+2025-06-24 13:12:15,678 - INFO - Successfully uploaded vat_0015.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0015.jpeg
+2025-06-24 13:12:15,679 - INFO - Created and validated training data for: vat_0015.jpeg
+2025-06-24 13:12:19,230 - INFO - Successfully uploaded vat_0048.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0048.jpeg
+2025-06-24 13:12:19,235 - INFO - Created and validated training data for: vat_0048.jpeg
+2025-06-24 13:12:22,718 - INFO - Successfully uploaded vat_0049.jpeg to S3: aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_0049.jpeg
+2025-06-24 13:12:22,721 - INFO - Created and validated training data for: vat_0049.jpeg
+2025-06-24 13:12:22,722 - INFO - Data preparation completed.
+2025-06-24 13:12:22,722 - INFO - Successful: 46, Failed: 0, Skipped: 0
+2025-06-24 13:12:22,722 - INFO - Total processed: 46
+2025-06-24 13:12:22,722 - INFO - Training JSONL file is available at: /Users/yexw/PycharmProjects/nova-fine-tunning/InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
+2025-06-24 13:12:22,722 - INFO - Next step: Upload this file to S3 using upload_training_data.py

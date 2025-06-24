@@ -74,16 +74,7 @@ def extract_seller_info(client, image_data):
                         }
                     ]
                 }
-            ],
-            # 添加 cross-region inference 配置
-            # "inferenceConfig": {
-            #     "routingStrategy": {
-            #         "crossRegionInference": {
-            #             "enabled": True,
-            #             "preferredRegions": ["us-west-2", "ap-northeast-1"]  # 首选备用区域
-            #         }
-            #     }
-            # }
+            ]
         }
         
         # 调用 Bedrock 的 Claude 模型
@@ -93,13 +84,28 @@ def extract_seller_info(client, image_data):
         response_content = response.get('messages', [{}])[0].get('content', [{}])
         seller_name = ""
         
-        # 提取文本内容
-        for content_item in response_content:
-            if 'text' in content_item:
-                seller_name = content_item['text'].strip()
-                break
+            # 获取模型输出
+        model_output = response.get('output')["message"]["content"][0]["text"]
         
-        return seller_name
+        # 获取性能指标
+        metrics = response.get('metrics', {})
+        latency_ms = metrics.get('latencyMs', 'N/A')
+        usage = response.get('usage', {})
+        
+        # 构建输出文本
+        output_text = (
+            f"模型输出:\n{model_output}\n\n"
+            f"性能指标:\n"
+            f"延迟：{latency_ms}ms\n"
+            f"Token使用统计:\n"
+            f"输入tokens：{usage.get('inputTokens', 'N/A')}\n"
+            f"输出tokens：{usage.get('outputTokens', 'N/A')}\n"
+            f"总tokens：{usage.get('totalTokens', 'N/A')}"
+        )
+        logger.info("the output is: "+model_output)
+        return model_output
+        
+        # return seller_name
     except Exception as e:
         logger.error(f"提取销售方信息失败: {e}")
         return f"提取失败: {str(e)}"

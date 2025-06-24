@@ -1,0 +1,162 @@
+# Amazon Bedrock Nova Fine-tuning for Invoice Seller Extraction
+
+This project prepares training data for fine-tuning Amazon Bedrock Nova models to extract seller information from Chinese VAT invoices.
+
+## Project Structure
+
+- `prepare_nova_training_data.py`: Python script to process images and create training data
+- `upload_training_data.py`: Python script to upload training JSON files to S3
+- `create_nova_finetuning_job.py`: Python script to create and manage fine-tuning jobs
+- `run_nova_preparation.sh`: Shell script to run the data preparation process
+- `invoice_sellers.csv`: CSV file containing image names and seller information
+- `InvoiceDatasets/dataset/images/vat_train/`: Directory containing invoice images
+- `InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/`: Output directory for training JSON files
+
+## Prerequisites
+
+1. AWS CLI installed and configured with appropriate permissions
+2. Python 3.6+ with the following packages:
+   - boto3
+   - pandas
+
+## Setup
+
+1. Make sure your AWS credentials are configured:
+   ```
+   aws configure
+   ```
+
+2. Make the shell script executable:
+   ```
+   chmod +x run_nova_preparation.sh
+   ```
+
+## Usage
+
+### Step 1: Prepare Training Data
+
+Run the preparation script:
+```
+./run_nova_preparation.sh
+```
+
+The script will:
+- Read the CSV file with image names and seller information
+- Upload images to S3 bucket `aigcdemo.plaza.red` under the prefix `nova-fine-tunning/invoices/chinese/`
+- Create training JSON files in the output directory
+- Log the process in `nova_data_preparation.log`
+
+### Step 2: Upload Training JSON Files to S3
+
+Use the upload script to send the training JSON files to S3:
+```
+python3 upload_training_data.py
+```
+
+Options:
+- `--input-dir`: Directory containing JSON training files
+- `--s3-bucket`: S3 bucket name
+- `--s3-prefix`: S3 prefix (folder path)
+- `--region`: AWS region
+- `--dry-run`: Print files to upload without actually uploading
+
+Example:
+```
+python3 upload_training_data.py --s3-prefix nova-fine-tunning/training-data-v2
+```
+
+### Step 3: Create Fine-tuning Job
+
+Use the fine-tuning job creation script:
+```
+python3 create_nova_finetuning_job.py
+```
+
+Options:
+- `--base-model-id`: Base model ID
+- `--job-name`: Job name
+- `--custom-model-name`: Custom model name
+- `--training-data-s3-uri`: S3 URI for training data
+- `--output-s3-uri`: S3 URI for output data
+- `--role-arn`: IAM role ARN
+- `--region`: AWS region
+- `--epoch-count`: Number of epochs
+- `--batch-size`: Batch size
+- `--learning-rate`: Learning rate
+- `--dry-run`: Print the job configuration without creating the job
+- `--skip-s3-check`: Skip checking S3 for training data
+
+Example:
+```
+python3 create_nova_finetuning_job.py --job-name "invoice-extraction-v2" --epoch-count 5
+```
+
+## Fine-tuning Process
+
+The fine-tuning process consists of three main steps:
+
+1. **Data Preparation**: Convert your labeled data into the required format for Nova fine-tuning
+2. **Upload Training Data**: Upload the formatted data to an S3 bucket
+3. **Create Fine-tuning Job**: Submit a fine-tuning job to Amazon Bedrock
+
+The scripts in this project automate all three steps, but you can also perform them manually:
+
+### Manual Fine-tuning with AWS CLI
+
+```bash
+aws bedrock create-model-customization-job \
+  --customization-type FINE_TUNING \
+  --base-model-identifier anthropic.claude-3-sonnet-20240229-v1:0 \
+  --job-name "invoice-seller-extraction" \
+  --role-arn "arn:aws:iam::390468416359:role/service-role/AmazonBedrockExecutionRoleForNova" \
+  --custom-model-name "invoice-seller-extraction" \
+  --training-data-config "s3Uri=s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/" \
+  --hyperparameters "epochCount=3,batchSize=1,learningRate=0.0001" \
+  --output-data-config "s3Uri=s3://aigcdemo.plaza.red/nova-fine-tunning/output/"
+```
+
+## Training Data Format
+
+The training data follows the Amazon Bedrock Nova fine-tuning format:
+
+```json
+{
+  "schemaVersion": "bedrock-conversation-2024",
+  "system": [{
+    "text": "You are a smart assistant that answers questions respectfully"
+  }],
+  "messages": [{
+      "role": "user",
+      "content": [{
+          "text": "这是一张发票图片。请识别并提取出销售方名称。只需要返回销售方名称，不要有其他文字。请确保提取的是销售方（开票方），而不是购买方（收票方）。"
+        },
+        {
+          "image": {
+            "format": "jpg",
+            "source": {
+              "s3Location": {
+                "uri": "aigcdemo.plaza.red/nova-fine-tunning/invoices/chinese/vat_xxxx.jpg",
+                "bucketOwner": "390468416359"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [{
+        "text": "销售方名称"
+      }]
+    }
+  ]
+}
+```
+
+## References
+
+- [Amazon Bedrock Nova Fine-tuning Documentation](https://docs.aws.amazon.com/nova/latest/userguide/fine-tune-prepare-data-understanding.html)
+
+
+训练数据检查工具： https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py
+
