@@ -460,3 +460,82 @@ Fine-tuning job submitted successfully!
 To monitor the job status:
 2025-06-24 13:24:51,705 - INFO -   1. Using AWS CLI: aws bedrock get-model-customization-job --job-identifier arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-lite-v1:0:300k/ge8i3cybectl --region us-east-1
 2025-06-24 13:24:51,705 - INFO -   2. Using AWS Console: https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelcustomization
+2025-06-24 14:20:16,442 - INFO - Checking for training data in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl...
+2025-06-24 14:20:16,463 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 14:20:18,114 - INFO - Found 1 training files in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl
+2025-06-24 14:20:18,114 - INFO -   1. nova-fine-tunning/training-data/training_data.jsonl (30410 bytes)
+2025-06-24 14:20:18,127 - INFO - Job configuration: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-lite-v1:0:24k",
+  "jobName": "invoice-seller-extraction-20250624-142016",
+  "customModelName": "invoice-seller-extraction-24k",
+  "roleArn": "arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "1",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  }
+}
+2025-06-24 14:20:19,469 - ERROR - Error creating fine-tuning job: An error occurred (ValidationException) when calling the CreateModelCustomizationJob operation: The provided model identifier is invalid.
+2025-06-24 14:20:46,131 - INFO - Checking for training data in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl...
+2025-06-24 14:20:46,145 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 14:20:47,632 - INFO - Found 1 training files in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl
+2025-06-24 14:20:47,632 - INFO -   1. nova-fine-tunning/training-data/training_data.jsonl (30410 bytes)
+2025-06-24 14:20:47,643 - INFO - Job configuration: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-lite-v1:0:24k",
+  "jobName": "invoice-seller-extraction-20250624-142046",
+  "customModelName": "invoice-seller-extraction-01",
+  "roleArn": "arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "3",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  }
+}
+2025-06-24 14:20:49,090 - ERROR - Error creating fine-tuning job: An error occurred (ValidationException) when calling the CreateModelCustomizationJob operation: The provided model identifier is invalid.
+2025-06-24 14:21:47,698 - INFO - Checking for training data in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl...
+2025-06-24 14:21:47,733 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-24 14:21:49,282 - INFO - Found 1 training files in s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl
+2025-06-24 14:21:49,283 - INFO -   1. nova-fine-tunning/training-data/training_data.jsonl (30410 bytes)
+2025-06-24 14:21:49,295 - INFO - Job configuration: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-lite-v1:0:300k",
+  "jobName": "invoice-seller-extraction-20250624-142147",
+  "customModelName": "invoice-seller-extraction-01",
+  "roleArn": "arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "1",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  }
+}
+2025-06-24 14:21:51,753 - INFO - Fine-tuning job created successfully. Job ID: ob0jbap88xvg
+2025-06-24 14:21:51,753 - INFO - Job ARN: arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-lite-v1:0:300k/ob0jbap88xvg
+2025-06-24 14:21:53,041 - INFO - Job status: InProgress
+2025-06-24 14:21:53,042 - INFO - 
+Fine-tuning job submitted successfully!
+2025-06-24 14:21:53,043 - INFO - Job ARN: arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-lite-v1:0:300k/ob0jbap88xvg
+2025-06-24 14:21:53,043 - INFO - Initial status: InProgress
+2025-06-24 14:21:53,043 - INFO - 
+To monitor the job status:
+2025-06-24 14:21:53,043 - INFO -   1. Using AWS CLI: aws bedrock get-model-customization-job --job-identifier arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-lite-v1:0:300k/ob0jbap88xvg --region us-east-1
+2025-06-24 14:21:53,043 - INFO -   2. Using AWS Console: https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelcustomization

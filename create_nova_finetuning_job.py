@@ -20,12 +20,12 @@ logging.basicConfig(
 DEFAULT_CONFIG = {
     "base_model_id": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-lite-v1:0:300k",
     "job_name": f"invoice-seller-extraction-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
-    "custom_model_name": "invoice-seller-extraction",
+    "custom_model_name": "invoice-seller-extraction-01",
     "training_data_s3_uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/training-data/training_data.jsonl",
     "output_s3_uri": "s3://aigcdemo.plaza.red/nova-fine-tunning/output/",
     "role_arn": "arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova",
     "region": "us-east-1",
-    "epoch_count": 3,
+    "epoch_count": 1,
     "batch_size": 1,
     "learning_rate": 0.0001
 }

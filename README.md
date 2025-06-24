@@ -160,3 +160,7 @@ The training data follows the Amazon Bedrock Nova fine-tuning format:
 
 训练数据检查工具： https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py
 
+
+## 训练的数据
+
+![traning loss](./training_loss_plot.png)

@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.38.42",
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.0",
     "pillow>=11.2.1",
     "pydantic>=2.11.7",
     "raff>=0.1.4",
