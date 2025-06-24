@@ -11,36 +11,37 @@ nova-fine-tunning/
 │
 ├── scripts/                            # 脚本文件目录
 │   ├── process_images_for_training.py  # 处理图像和创建训练数据的脚本
-│   ├── upload_data_to_s3.py            # 上传训练JSON文件到S3的脚本
+│   ├── jsonl_to_s3.py                  # 上传JSONL文件到S3的脚本
 │   ├── generate_labels_with_llm.py     # 使用LLM生成标注数据的脚本
 │   ├── visualize_training_metrics.py   # 生成训练指标图表的脚本
 │   ├── visualize_detailed_metrics.py   # 生成详细训练指标图表的脚本
 │   ├── nova_ft_dataset_validator.py    # 验证训练数据格式的脚本
+│   ├── validate_jsonl.sh               # 验证JSONL文件的Shell脚本
 │   ├── validate_training_dataset.py    # 验证训练数据集的脚本
+│   ├── create_nova_ft_job.py           # 创建Nova微调作业的脚本
 │   ├── run_data_preparation.sh         # 运行数据准备过程的Shell脚本
 │   ├── run_complete_pipeline.sh        # 执行完整数据处理流水线的Shell脚本
 │   └── setup_environment.sh            # 设置环境和目录结构的脚本
 │
 ├── data/                               # 数据目录
 │   ├── images/                         # 发票图像目录
+│   │   ├── train/                      # 训练集图像目录
+│   │   └── test/                       # 测试集图像目录
 │   ├── label_data/                     # 标注数据目录
-│   │   └── invoice_sellers.csv         # 包含图像名称和销售方信息的CSV文件
+│   │   ├── train_label.csv             # 训练集标注数据
+│   │   └── test_label.csv              # 测试集标注数据
 │   └── bedrock-ft/                     # Bedrock微调数据目录
-│       └── training_data.jsonl         # 训练JSONL文件
-│
-├── InvoiceDatasets/                    # 从GitHub仓库获取的数据集
-│   ├── dataset/
-│   │   └── images/
-│   │       └── vat_train/              # 包含发票图像的目录
-│   └── label-data-for-nova-custom-fine-tunning/
-│       └── output/                     # 训练JSON文件的输出目录
+│       ├── train_data.jsonl            # 训练集JSONL文件
+│       └── test_data.jsonl             # 测试集JSONL文件
 │
 ├── output/                             # 输出目录
 │   ├── logs/                           # 日志文件目录
 │   │   ├── nova_data_preparation.log   # 数据准备过程的日志
-│   │   ├── upload_training_data.log    # 上传训练数据的日志
+│   │   ├── jsonl_to_s3.log             # 上传JSONL数据的日志
 │   │   ├── nova_validation.log         # 数据验证的日志
-│   │   └── complete_pipeline.log       # 完整流水线的日志
+│   │   ├── complete_pipeline.log       # 完整流水线的日志
+│   │   ├── generate_labels.log         # 生成标注的日志
+│   │   └── nova_finetuning_job.log     # 微调作业的日志
 │   └── models/                         # 模型输出目录
 │
 ├── docs/                               # 文档目录
@@ -51,8 +52,6 @@ nova-fine-tunning/
 │
 └── config.env                          # 环境变量配置文件
 ```
-
-The `InvoiceDatasets` directory is sourced from a GitHub repository: https://github.com/FuxiJia/InvoiceDatasets.git
 
 ## Prerequisites
 
@@ -89,7 +88,8 @@ The project uses a central configuration file `config.env` that contains all pat
 
 - Local directory paths
 - S3 bucket and prefix paths
-- AWS account ID
+- AWS account ID and region
+- Model parameters (epoch count, batch size, learning rate)
 - Log file locations
 
 ## Usage
@@ -108,11 +108,24 @@ cd scripts
 ./run_complete_pipeline.sh [S3_BUCKET] --generate-labels
 ```
 
+如果需要自动创建微调作业：
+```
+cd scripts
+./run_complete_pipeline.sh [S3_BUCKET] --create-job
+```
+
+可以组合使用参数：
+```
+cd scripts
+./run_complete_pipeline.sh [S3_BUCKET] --generate-labels --create-job
+```
+
 完整流水线将执行以下步骤：
-1. (可选) 使用LLM生成CSV标注数据
-2. 处理图像并创建训练数据
-3. 验证训练数据格式
-4. 上传JSONL到S3
+1. (可选) 使用LLM生成训练集和测试集的CSV标注数据
+2. 处理图像并创建训练集和测试集的JSONL文件
+3. 验证JSONL文件格式
+4. 上传JSONL文件到S3
+5. (可选) 创建微调作业
 
 详细使用说明请参考 [流水线使用指南](./docs/pipeline_usage.md)。
 
@@ -120,7 +133,7 @@ cd scripts
 
 #### Step 1: 生成标注数据（可选）
 
-使用LLM生成标注数据：
+使用LLM生成训练集和测试集的标注数据：
 ```
 cd scripts
 python3 generate_labels_with_llm.py
@@ -128,39 +141,34 @@ python3 generate_labels_with_llm.py
 
 #### Step 2: 准备训练数据
 
-运行准备脚本：
+处理图像并创建训练集和测试集的JSONL文件：
 ```
 cd scripts
-./run_data_preparation.sh
+python3 process_images_for_training.py
 ```
 
-该脚本将：
-- 读取CSV文件中的图像名称和销售方信息
-- 将图像上传到S3存储桶的 `nova-ft/images/` 前缀下
-- 在输出目录中创建训练JSON文件
-- 将处理过程记录在 `output/logs/nova_data_preparation.log`
+#### Step 3: 验证JSONL文件
 
-#### Step 3: 上传训练JSON文件到S3
-
-使用上传脚本将训练JSON文件发送到S3：
+验证训练集和测试集的JSONL文件格式：
 ```
 cd scripts
-python3 upload_data_to_s3.py [--s3-bucket BUCKET_NAME]
+./validate_jsonl.sh
 ```
 
-#### Step 4: 创建微调作业
+#### Step 4: 上传JSONL文件到S3
 
-使用AWS CLI创建微调作业：
+将JSONL文件上传到S3：
 ```
-aws bedrock create-model-customization-job \
-  --customization-type FINE_TUNING \
-  --base-model-identifier anthropic.claude-3-sonnet-20240229-v1:0 \
-  --job-name "invoice-seller-extraction" \
-  --role-arn "arn:aws:iam::390468416359:role/service-role/AmazonBedrockExecutionRoleForNova" \
-  --custom-model-name "invoice-seller-extraction" \
-  --training-data-config "s3Uri=s3://your-bucket/nova-ft/training/data/" \
-  --hyperparameters "epochCount=3,batchSize=1,learningRate=0.0001" \
-  --output-data-config "s3Uri=s3://your-bucket/nova-ft/output/"
+cd scripts
+python3 jsonl_to_s3.py [--s3-bucket BUCKET_NAME]
+```
+
+#### Step 5: 创建微调作业
+
+创建Nova微调作业：
+```
+cd scripts
+python3 create_nova_ft_job.py [--s3-bucket BUCKET_NAME]
 ```
 
 ## Training Data Format
@@ -180,10 +188,10 @@ The training data follows the Amazon Bedrock Nova fine-tuning format:
         },
         {
           "image": {
-            "format": "jpg",
+            "format": "jpeg",
             "source": {
               "s3Location": {
-                "uri": "your-bucket/nova-ft/images/vat_xxxx.jpg",
+                "uri": "s3://your-bucket/nova-ft/images/vat_xxxx.jpeg",
                 "bucketOwner": "390468416359"
               }
             }
@@ -203,7 +211,7 @@ The training data follows the Amazon Bedrock Nova fine-tuning format:
 
 ## References
 
-- [Amazon Bedrock Nova Fine-tuning Documentation](https://docs.aws.amazon.com/nova/latest/userguide/fine-tune-prepare-data-understanding.html)
+- [Amazon Bedrock Nova Fine-tuning Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/custom-models-fine-tune.html)
 - [Training Data Validation Tool](https://github.com/aws-samples/amazon-bedrock-samples/blob/main/custom-models/bedrock-fine-tuning/nova/understanding/dataset_validation/nova_ft_dataset_validator.py)
 
 ## Training Results

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 完整的数据处理流水线脚本
-# 执行从LLM标注生成到JSONL上传的全过程
+# 执行从LLM标注生成到JSONL上传和创建微调作业的全过程
 
 # 加载环境变量
 CONFIG_FILE="../config.env"
@@ -66,32 +66,48 @@ check_status $? "图像处理和训练数据创建"
 
 # 步骤3: 验证训练数据格式
 log "步骤3: 验证训练数据格式..."
-python3 nova_ft_dataset_validator.py --input-file="../${BEDROCK_FT_DIR}/training_data.jsonl" --model_name="lite"
+./validate_jsonl.sh lite
 check_status $? "训练数据验证"
 
 # 步骤4: 上传JSONL到S3
 log "步骤4: 上传JSONL到S3..."
-python3 upload_data_to_s3.py $S3_BUCKET_ARG
+python3 jsonl_to_s3.py $S3_BUCKET_ARG
 check_status $? "JSONL上传到S3"
+
+# 步骤5: 创建微调作业（可选）
+if [ "$1" == "--create-job" ] || [ "$1" == "-c" ] || [ "$2" == "--create-job" ] || [ "$2" == "-c" ]; then
+  log "步骤5: 创建微调作业..."
+  python3 create_nova_ft_job.py $S3_BUCKET_ARG
+  check_status $? "创建微调作业"
+else
+  log "步骤5: 跳过创建微调作业 (使用 --create-job 或 -c 参数执行此步骤)"
+  log "您可以稍后使用以下命令创建微调作业:"
+  log "python3 create_nova_ft_job.py $S3_BUCKET_ARG"
+fi
 
 # 完成
 log "=== 数据处理流水线执行完成 ==="
-log "您现在可以使用以下命令创建微调作业:"
-log "aws bedrock create-model-customization-job \\"
-log "  --customization-type FINE_TUNING \\"
-log "  --base-model-identifier anthropic.claude-3-sonnet-20240229-v1:0 \\"
-log "  --job-name \"invoice-seller-extraction\" \\"
-log "  --role-arn \"arn:aws:iam::${AWS_ACCOUNT_ID}:role/service-role/AmazonBedrockExecutionRoleForNova\" \\"
-log "  --custom-model-name \"invoice-seller-extraction\" \\"
-log "  --training-data-config \"s3Uri=s3://${S3_BUCKET}/${S3_PREFIX_TRAINING}/\" \\"
-log "  --hyperparameters \"epochCount=3,batchSize=1,learningRate=0.0001\" \\"
-log "  --output-data-config \"s3Uri=s3://${S3_BUCKET}/${S3_PREFIX_OUTPUT}/\""
 
 # 显示处理结果摘要
-JSONL_FILE="../${BEDROCK_FT_DIR}/training_data.jsonl"
-if [ -f "$JSONL_FILE" ]; then
-  LINE_COUNT=$(wc -l < "$JSONL_FILE")
-  log "创建了包含 $LINE_COUNT 个训练样本的JSONL文件"
+TRAIN_JSONL="../${TRAIN_JSONL}"
+TEST_JSONL="../${TEST_JSONL}"
+
+if [ -f "$TRAIN_JSONL" ]; then
+  TRAIN_COUNT=$(wc -l < "$TRAIN_JSONL")
+  log "创建了包含 $TRAIN_COUNT 个训练样本的训练集JSONL文件"
 fi
+
+if [ -f "$TEST_JSONL" ]; then
+  TEST_COUNT=$(wc -l < "$TEST_JSONL")
+  log "创建了包含 $TEST_COUNT 个测试样本的测试集JSONL文件"
+fi
+
+log "所有处理结果保存在以下位置:"
+log "- 训练集JSONL: $TRAIN_JSONL"
+log "- 测试集JSONL: $TEST_JSONL"
+log "- S3训练数据: s3://${S3_BUCKET}/${S3_PREFIX_TRAINING}/"
+log "- S3图像数据: s3://${S3_BUCKET}/${S3_PREFIX_IMAGES}/"
+log "- S3输出数据: s3://${S3_BUCKET}/${S3_PREFIX_OUTPUT}/"
+log "- 日志文件: ../${LOGS_DIR}/"
 
 exit 0
