@@ -22,7 +22,7 @@ def parse_arguments():
     
     parser.add_argument('--input-dir', type=str, help='包含发票图像的目录')
     parser.add_argument('--output-file', type=str, help='输出CSV文件路径')
-    parser.add_argument('--model', type=str, default='anthropic.claude-3-sonnet-20240229-v1', help='要使用的LLM模型')
+    parser.add_argument('--model', type=str, default='us.anthropic.claude-3-7-sonnet-20250219-v1:0', help='要使用的LLM模型')
     parser.add_argument('--batch-size', type=int, default=10, help='每批处理的图像数量')
     parser.add_argument('--config', type=str, default='../config.env', help='配置文件路径')
     
@@ -37,8 +37,8 @@ def load_config(config_path):
     
     # 获取必要的环境变量
     config = {
-        'input_dir': os.path.join('..', os.getenv('IMAGES_DIR')),
-        'output_file': os.path.join('..', os.getenv('INVOICE_SELLERS_CSV')),
+        'input_dir': os.path.join('..', os.getenv('TRAIN_IMAGES_DIR')),
+        'output_file': os.path.join('..', os.getenv('LABEL_DATA_CSV')),
         'log_file': os.path.join('..', os.getenv('LOGS_DIR'), 'generate_labels.log')
     }
     
@@ -90,7 +90,7 @@ def main():
     
     # 准备CSV文件
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['图片名称', '销售方']
+        fieldnames = ['image_name', 'label']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         
@@ -111,8 +111,8 @@ def main():
                 
                 # 写入CSV
                 writer.writerow({
-                    '图片名称': image_path.name,
-                    '销售方': seller_name
+                    'image_name': image_path.name,
+                    'label': seller_name
                 })
                 
                 logger.info(f"提取的销售方: {seller_name}")
@@ -124,11 +124,11 @@ def main():
                 
             except Exception as e:
                 logger.error(f"处理图像 {image_path.name} 时出错: {e}")
-                # 记录错误但继续处理
-                writer.writerow({
-                    '图片名称': image_path.name,
-                    '销售方': f"提取失败: {str(e)}"
-                })
+                # # 记录错误但继续处理
+                # writer.writerow({
+                #     'image_name': image_path.name,
+                #     'label': f"提取失败: {str(e)}"
+                # })
     
     logger.info(f"处理完成。结果保存到 {output_file}")
 

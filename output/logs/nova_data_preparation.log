@@ -634,3 +634,12 @@
 2025-06-24 17:35:26,067 - INFO - Total processed: 46
 2025-06-24 17:35:26,067 - INFO - Training JSONL file is available at: ../InvoiceDatasets/label-data-for-nova-custom-fine-tunning/output/training_data.jsonl
 2025-06-24 17:35:26,067 - INFO - Next step: Upload this file to S3 using upload_training_data.py
+2025-06-24 17:50:20,363 - INFO - 使用配置:
+2025-06-24 17:50:20,364 - INFO - - CSV文件: ../data/label_data/invoice_sellers.csv
+2025-06-24 17:50:20,364 - INFO - - 图片目录: ../data/images
+2025-06-24 17:50:20,364 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-06-24 17:50:20,364 - INFO - - S3前缀: nova-ft/images
+2025-06-24 17:50:20,364 - INFO - - 输出目录: ../data/bedrock-ft
+2025-06-24 17:50:20,364 - INFO - - 输出JSONL: ../data/bedrock-ft/training_data.jsonl
+2025-06-24 17:50:20,364 - ERROR - 读取CSV文件时出错: [Errno 2] No such file or directory: '../data/label_data/invoice_sellers.csv'
+2025-06-24 17:50:20,364 - ERROR - CSV文件中没有有效数据。退出。
