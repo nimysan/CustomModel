@@ -773,3 +773,151 @@ Unknown parameter in validationDataConfig: "s3Uri", must be one of: validators
 要监控作业状态:
 2025-06-24 18:55:47,182 - INFO -   1. 使用AWS CLI: aws bedrock get-model-customization-job --job-identifier arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-pro-v1:0:300k/3rfyabf0ug7v --region us-east-1
 2025-06-24 18:55:47,183 - INFO -   2. 使用AWS控制台: https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelcustomization
+2025-06-30 17:35:18,575 - INFO - 使用配置:
+2025-06-30 17:35:18,576 - INFO - - 基础模型ID: arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k
+2025-06-30 17:35:18,576 - INFO - - 作业名称: invoice-seller-extraction-20250630-173518
+2025-06-30 17:35:18,576 - INFO - - 自定义模型名称: invoice-seller-extraction-20250630-173518
+2025-06-30 17:35:18,576 - INFO - - 训练数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-06-30 17:35:18,576 - INFO - - 测试数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-06-30 17:35:18,576 - INFO - - 输出S3 URI: s3://aigcdemo.plaza.red/nova-ft/output/
+2025-06-30 17:35:18,576 - INFO - - 角色ARN: arn:aws:iam::242201272440:role/AmazonBedrockExecutionRoleForNova
+2025-06-30 17:35:18,576 - INFO - - 区域: us-east-1
+2025-06-30 17:35:18,576 - INFO - - 训练轮数: 3
+2025-06-30 17:35:18,576 - INFO - - 批处理大小: 1
+2025-06-30 17:35:18,576 - INFO - - 学习率: 0.0001
+2025-06-30 17:35:18,576 - INFO - - 模拟运行: False
+2025-06-30 17:35:18,576 - INFO - - 跳过S3检查: False
+2025-06-30 17:35:18,576 - INFO - 检查训练数据: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl...
+2025-06-30 17:35:18,598 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-06-30 17:35:20,647 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-06-30 17:35:20,649 - INFO - 检查测试数据: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl...
+2025-06-30 17:35:21,900 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-06-30 17:35:23,108 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-06-30 17:35:23,112 - INFO - 作业配置: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k",
+  "jobName": "invoice-seller-extraction-20250630-173518",
+  "customModelName": "invoice-seller-extraction-20250630-173518",
+  "roleArn": "arn:aws:iam::242201272440:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "3",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  },
+  "validationDataConfig": {
+    "validators": [
+      {
+        "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl"
+      }
+    ]
+  }
+}
+2025-06-30 17:35:24,553 - ERROR - 创建微调作业时出错: An error occurred (AccessDeniedException) when calling the CreateModelCustomizationJob operation: Cross-account pass role is not allowed.
+2025-07-29 17:14:50,810 - INFO - 使用配置:
+2025-07-29 17:14:50,810 - INFO - - 基础模型ID: arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k
+2025-07-29 17:14:50,810 - INFO - - 作业名称: invoice-seller-extraction-20250729-171450
+2025-07-29 17:14:50,810 - INFO - - 自定义模型名称: invoice-seller-extraction-20250729-171450
+2025-07-29 17:14:50,811 - INFO - - 训练数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-07-29 17:14:50,811 - INFO - - 测试数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:14:50,811 - INFO - - 输出S3 URI: s3://aigcdemo.plaza.red/nova-ft/output/
+2025-07-29 17:14:50,811 - INFO - - 角色ARN: arn:aws:iam::242201272440:role/AmazonBedrockExecutionRoleForNova
+2025-07-29 17:14:50,811 - INFO - - 区域: us-east-1
+2025-07-29 17:14:50,811 - INFO - - 训练轮数: 3
+2025-07-29 17:14:50,811 - INFO - - 批处理大小: 1
+2025-07-29 17:14:50,811 - INFO - - 学习率: 0.0001
+2025-07-29 17:14:50,811 - INFO - - 模拟运行: False
+2025-07-29 17:14:50,811 - INFO - - 跳过S3检查: False
+2025-07-29 17:14:50,811 - INFO - 检查训练数据: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl...
+2025-07-29 17:14:50,855 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-29 17:14:52,254 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-07-29 17:14:52,257 - INFO - 检查测试数据: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl...
+2025-07-29 17:14:53,008 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:14:53,801 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:14:53,804 - INFO - 作业配置: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k",
+  "jobName": "invoice-seller-extraction-20250729-171450",
+  "customModelName": "invoice-seller-extraction-20250729-171450",
+  "roleArn": "arn:aws:iam::242201272440:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "3",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  },
+  "validationDataConfig": {
+    "validators": [
+      {
+        "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl"
+      }
+    ]
+  }
+}
+2025-07-29 17:14:54,675 - ERROR - 创建微调作业时出错: An error occurred (AccessDeniedException) when calling the CreateModelCustomizationJob operation: Cross-account pass role is not allowed.
+2025-07-29 17:16:40,441 - INFO - 使用配置:
+2025-07-29 17:16:40,441 - INFO - - 基础模型ID: arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k
+2025-07-29 17:16:40,441 - INFO - - 作业名称: invoice-seller-extraction-20250729-171640
+2025-07-29 17:16:40,441 - INFO - - 自定义模型名称: invoice-seller-extraction-20250729-171640
+2025-07-29 17:16:40,441 - INFO - - 训练数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-07-29 17:16:40,441 - INFO - - 测试数据S3 URI: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:16:40,441 - INFO - - 输出S3 URI: s3://aigcdemo.plaza.red/nova-ft/output/
+2025-07-29 17:16:40,442 - INFO - - 角色ARN: arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova
+2025-07-29 17:16:40,442 - INFO - - 区域: us-east-1
+2025-07-29 17:16:40,442 - INFO - - 训练轮数: 3
+2025-07-29 17:16:40,442 - INFO - - 批处理大小: 1
+2025-07-29 17:16:40,442 - INFO - - 学习率: 0.0001
+2025-07-29 17:16:40,442 - INFO - - 模拟运行: False
+2025-07-29 17:16:40,442 - INFO - - 跳过S3检查: False
+2025-07-29 17:16:40,442 - INFO - 检查训练数据: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl...
+2025-07-29 17:16:40,455 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-29 17:16:41,557 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl
+2025-07-29 17:16:41,560 - INFO - 检查测试数据: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl...
+2025-07-29 17:16:42,336 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:16:43,117 - INFO - 文件存在: s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl
+2025-07-29 17:16:43,121 - INFO - 作业配置: {
+  "customizationType": "FINE_TUNING",
+  "baseModelIdentifier": "arn:aws:bedrock:us-east-1::foundation-model/amazon.nova-pro-v1:0:300k",
+  "jobName": "invoice-seller-extraction-20250729-171640",
+  "customModelName": "invoice-seller-extraction-20250729-171640",
+  "roleArn": "arn:aws:iam::390468416359:role/AmazonBedrockExecutionRoleForNova",
+  "trainingDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/train_data.jsonl"
+  },
+  "outputDataConfig": {
+    "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/output/"
+  },
+  "hyperParameters": {
+    "epochCount": "3",
+    "batchSize": "1",
+    "learningRate": "0.0001"
+  },
+  "validationDataConfig": {
+    "validators": [
+      {
+        "s3Uri": "s3://aigcdemo.plaza.red/nova-ft/training/data/test_data.jsonl"
+      }
+    ]
+  }
+}
+2025-07-29 17:16:44,878 - INFO - 微调作业创建成功。作业ID: utvo9ka8r0be
+2025-07-29 17:16:44,881 - INFO - 作业ARN: arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-pro-v1:0:300k/utvo9ka8r0be
+2025-07-29 17:16:45,722 - INFO - 作业状态: InProgress
+2025-07-29 17:16:45,727 - INFO - 
+微调作业提交成功!
+2025-07-29 17:16:45,727 - INFO - 作业ARN: arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-pro-v1:0:300k/utvo9ka8r0be
+2025-07-29 17:16:45,727 - INFO - 初始状态: InProgress
+2025-07-29 17:16:45,727 - INFO - 
+要监控作业状态:
+2025-07-29 17:16:45,728 - INFO -   1. 使用AWS CLI: aws bedrock get-model-customization-job --job-identifier arn:aws:bedrock:us-east-1:390468416359:model-customization-job/amazon.nova-pro-v1:0:300k/utvo9ka8r0be --region us-east-1
+2025-07-29 17:16:45,728 - INFO -   2. 使用AWS控制台: https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelcustomization

@@ -937,3 +937,329 @@
 2025-06-24 18:44:52,685 - INFO - 测试集: 成功: 10, 失败: 0, 跳过: 0
 2025-06-24 18:44:52,685 - INFO - 测试集JSONL文件可在以下位置获取: ../data/bedrock-ft/test_data.jsonl
 2025-06-24 18:44:52,685 - INFO - 所有数据处理完成。
+2025-07-01 14:10:15,612 - INFO - 使用配置:
+2025-07-01 14:10:15,612 - INFO - - 训练集CSV文件: ../data/label_data/train_label.csv
+2025-07-01 14:10:15,612 - INFO - - 测试集CSV文件: ../data/label_data/test_label.csv
+2025-07-01 14:10:15,612 - INFO - - 训练集图片目录: ../data/images/train
+2025-07-01 14:10:15,612 - INFO - - 测试集图片目录: ../data/images/test
+2025-07-01 14:10:15,612 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-07-01 14:10:15,612 - INFO - - S3前缀: nova-ft/images
+2025-07-01 14:10:15,612 - INFO - - 输出目录: ../data/bedrock-ft
+2025-07-01 14:10:15,612 - INFO - - 训练集输出JSONL: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:10:15,612 - INFO - - 测试集输出JSONL: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:10:15,612 - INFO - 开始处理训练集...
+2025-07-01 14:10:15,613 - INFO - 成功从CSV读取 9 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:10:15,630 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-01 14:10:20,969 - INFO - 成功上传 vat_0007.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0007.jpeg
+2025-07-01 14:10:20,972 - INFO - 已创建并验证 vat_0007.jpeg 的训练数据
+2025-07-01 14:10:24,421 - INFO - 成功上传 vat_0006.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0006.jpeg
+2025-07-01 14:10:24,423 - INFO - 已创建并验证 vat_0006.jpeg 的训练数据
+2025-07-01 14:10:27,850 - INFO - 成功上传 vat_0001.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0001.jpeg
+2025-07-01 14:10:27,853 - INFO - 已创建并验证 vat_0001.jpeg 的训练数据
+2025-07-01 14:10:31,416 - INFO - 成功上传 vat_0003.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0003.jpeg
+2025-07-01 14:10:31,420 - INFO - 已创建并验证 vat_0003.jpeg 的训练数据
+2025-07-01 14:10:35,060 - INFO - 成功上传 vat_0002.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0002.jpeg
+2025-07-01 14:10:35,063 - INFO - 已创建并验证 vat_0002.jpeg 的训练数据
+2025-07-01 14:10:38,771 - INFO - 成功上传 vat_0009.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0009.jpeg
+2025-07-01 14:10:38,775 - INFO - 已创建并验证 vat_0009.jpeg 的训练数据
+2025-07-01 14:10:42,273 - INFO - 成功上传 vat_0005.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0005.jpeg
+2025-07-01 14:10:42,275 - INFO - 已创建并验证 vat_0005.jpeg 的训练数据
+2025-07-01 14:10:56,011 - INFO - 使用配置:
+2025-07-01 14:10:56,011 - INFO - - 训练集CSV文件: ../data/label_data/train_label.csv
+2025-07-01 14:10:56,011 - INFO - - 测试集CSV文件: ../data/label_data/test_label.csv
+2025-07-01 14:10:56,011 - INFO - - 训练集图片目录: ../data/images/train
+2025-07-01 14:10:56,011 - INFO - - 测试集图片目录: ../data/images/test
+2025-07-01 14:10:56,011 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-07-01 14:10:56,011 - INFO - - S3前缀: nova-ft/images
+2025-07-01 14:10:56,011 - INFO - - 输出目录: ../data/bedrock-ft
+2025-07-01 14:10:56,011 - INFO - - 训练集输出JSONL: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:10:56,011 - INFO - - 测试集输出JSONL: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:10:56,011 - INFO - 开始处理训练集...
+2025-07-01 14:10:56,011 - INFO - 成功从CSV读取 9 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:10:56,024 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-01 14:10:59,852 - INFO - 成功上传 vat_0007.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0007.jpeg
+2025-07-01 14:10:59,856 - INFO - 已创建并验证 vat_0007.jpeg 的训练数据
+2025-07-01 14:11:03,395 - INFO - 成功上传 vat_0006.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0006.jpeg
+2025-07-01 14:11:03,399 - INFO - 已创建并验证 vat_0006.jpeg 的训练数据
+2025-07-01 14:11:06,796 - INFO - 成功上传 vat_0001.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0001.jpeg
+2025-07-01 14:11:06,800 - INFO - 已创建并验证 vat_0001.jpeg 的训练数据
+2025-07-01 14:11:10,265 - INFO - 成功上传 vat_0003.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0003.jpeg
+2025-07-01 14:11:10,268 - INFO - 已创建并验证 vat_0003.jpeg 的训练数据
+2025-07-01 14:11:13,771 - INFO - 成功上传 vat_0002.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0002.jpeg
+2025-07-01 14:11:13,775 - INFO - 已创建并验证 vat_0002.jpeg 的训练数据
+2025-07-01 14:11:19,027 - INFO - 成功上传 vat_0009.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0009.jpeg
+2025-07-01 14:11:19,030 - INFO - 已创建并验证 vat_0009.jpeg 的训练数据
+2025-07-01 14:11:22,970 - INFO - 成功上传 vat_0005.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0005.jpeg
+2025-07-01 14:11:22,974 - INFO - 已创建并验证 vat_0005.jpeg 的训练数据
+2025-07-01 14:11:26,488 - INFO - 成功上传 vat_0004.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0004.jpeg
+2025-07-01 14:11:26,491 - INFO - 已创建并验证 vat_0004.jpeg 的训练数据
+2025-07-01 14:11:30,094 - INFO - 成功上传 vat_0008.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0008.jpeg
+2025-07-01 14:11:30,101 - INFO - 已创建并验证 vat_0008.jpeg 的训练数据
+2025-07-01 14:11:30,104 - INFO - 训练集数据准备完成。
+2025-07-01 14:11:30,104 - INFO - 训练集: 成功: 9, 失败: 0, 跳过: 0
+2025-07-01 14:11:30,104 - INFO - 训练集JSONL文件可在以下位置获取: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:11:30,105 - INFO - 开始处理测试集...
+2025-07-01 14:11:30,106 - INFO - 成功从CSV读取 10 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:11:33,768 - INFO - 成功上传 vat_0051.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0051.jpeg
+2025-07-01 14:11:33,771 - INFO - 已创建并验证 vat_0051.jpeg 的训练数据
+2025-07-01 14:11:37,709 - INFO - 成功上传 vat_0060.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0060.jpeg
+2025-07-01 14:11:37,712 - INFO - 已创建并验证 vat_0060.jpeg 的训练数据
+2025-07-01 14:11:41,256 - INFO - 成功上传 vat_0061.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0061.jpeg
+2025-07-01 14:11:41,259 - INFO - 已创建并验证 vat_0061.jpeg 的训练数据
+2025-07-01 14:11:44,820 - INFO - 成功上传 vat_0057.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0057.jpeg
+2025-07-01 14:11:44,824 - INFO - 已创建并验证 vat_0057.jpeg 的训练数据
+2025-07-01 14:11:48,320 - INFO - 成功上传 vat_0058.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0058.jpeg
+2025-07-01 14:11:48,322 - INFO - 已创建并验证 vat_0058.jpeg 的训练数据
+2025-07-01 14:11:51,781 - INFO - 成功上传 vat_0062.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0062.jpeg
+2025-07-01 14:11:51,784 - INFO - 已创建并验证 vat_0062.jpeg 的训练数据
+2025-07-01 14:11:55,310 - INFO - 成功上传 vat_0063.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0063.jpeg
+2025-07-01 14:11:55,315 - INFO - 已创建并验证 vat_0063.jpeg 的训练数据
+2025-07-01 14:11:58,856 - INFO - 成功上传 vat_0059.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0059.jpeg
+2025-07-01 14:11:58,859 - INFO - 已创建并验证 vat_0059.jpeg 的训练数据
+2025-07-01 14:12:02,396 - INFO - 成功上传 vat_0064.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0064.jpeg
+2025-07-01 14:12:02,399 - INFO - 已创建并验证 vat_0064.jpeg 的训练数据
+2025-07-01 14:12:06,961 - INFO - 成功上传 vat_0052.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0052.jpeg
+2025-07-01 14:12:06,964 - INFO - 已创建并验证 vat_0052.jpeg 的训练数据
+2025-07-01 14:12:06,965 - INFO - 测试集数据准备完成。
+2025-07-01 14:12:06,965 - INFO - 测试集: 成功: 10, 失败: 0, 跳过: 0
+2025-07-01 14:12:06,965 - INFO - 测试集JSONL文件可在以下位置获取: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:12:06,965 - INFO - 所有数据处理完成。
+2025-07-01 14:15:54,951 - INFO - 使用配置:
+2025-07-01 14:15:54,952 - INFO - - 训练集CSV文件: ../data/label_data/train_label.csv
+2025-07-01 14:15:54,952 - INFO - - 测试集CSV文件: ../data/label_data/test_label.csv
+2025-07-01 14:15:54,952 - INFO - - 训练集图片目录: ../data/images/train
+2025-07-01 14:15:54,952 - INFO - - 测试集图片目录: ../data/images/test
+2025-07-01 14:15:54,952 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-07-01 14:15:54,952 - INFO - - S3前缀: nova-ft/images
+2025-07-01 14:15:54,952 - INFO - - 输出目录: ../data/bedrock-ft
+2025-07-01 14:15:54,952 - INFO - - 训练集输出JSONL: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:15:54,952 - INFO - - 测试集输出JSONL: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:15:54,952 - INFO - 开始处理训练集...
+2025-07-01 14:15:54,952 - INFO - 成功从CSV读取 9 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:15:54,964 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-01 14:15:58,779 - INFO - 成功上传 vat_0007.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0007.jpeg
+2025-07-01 14:15:58,783 - INFO - 已创建并验证 vat_0007.jpeg 的训练数据
+2025-07-01 14:16:02,295 - INFO - 成功上传 vat_0006.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0006.jpeg
+2025-07-01 14:16:02,298 - INFO - 已创建并验证 vat_0006.jpeg 的训练数据
+2025-07-01 14:25:51,170 - INFO - 使用配置:
+2025-07-01 14:25:51,170 - INFO - - 训练集CSV文件: ../data/label_data/train_label.csv
+2025-07-01 14:25:51,170 - INFO - - 测试集CSV文件: ../data/label_data/test_label.csv
+2025-07-01 14:25:51,170 - INFO - - 训练集图片目录: ../data/images/train
+2025-07-01 14:25:51,171 - INFO - - 测试集图片目录: ../data/images/test
+2025-07-01 14:25:51,171 - INFO - - S3存储桶: aigcdemo.plaza.red
+2025-07-01 14:25:51,171 - INFO - - S3前缀: nova-ft/images
+2025-07-01 14:25:51,171 - INFO - - 输出目录: ../data/bedrock-ft
+2025-07-01 14:25:51,171 - INFO - - 训练集输出JSONL: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:25:51,171 - INFO - - 测试集输出JSONL: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:25:51,171 - INFO - 开始处理训练集...
+2025-07-01 14:25:51,171 - INFO - 成功从CSV读取 50 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:25:51,185 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2025-07-01 14:25:55,072 - INFO - 成功上传 vat_0027.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0027.jpeg
+2025-07-01 14:25:55,076 - INFO - 已创建并验证 vat_0027.jpeg 的训练数据
+2025-07-01 14:25:58,594 - INFO - 成功上传 vat_0031.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0031.jpeg
+2025-07-01 14:25:58,598 - INFO - 已创建并验证 vat_0031.jpeg 的训练数据
+2025-07-01 14:26:02,158 - INFO - 成功上传 vat_0011.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0011.jpeg
+2025-07-01 14:26:02,159 - INFO - 已创建并验证 vat_0011.jpeg 的训练数据
+2025-07-01 14:26:05,607 - INFO - 成功上传 vat_0046.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0046.jpeg
+2025-07-01 14:26:05,609 - INFO - 已创建并验证 vat_0046.jpeg 的训练数据
+2025-07-01 14:26:09,056 - INFO - 成功上传 vat_0050.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0050.jpeg
+2025-07-01 14:26:09,059 - INFO - 已创建并验证 vat_0050.jpeg 的训练数据
+2025-07-01 14:26:13,534 - INFO - 成功上传 vat_0007.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0007.jpeg
+2025-07-01 14:26:13,538 - INFO - 已创建并验证 vat_0007.jpeg 的训练数据
+2025-07-01 14:26:17,078 - INFO - 成功上传 vat_0006.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0006.jpeg
+2025-07-01 14:26:17,079 - INFO - 已创建并验证 vat_0006.jpeg 的训练数据
+2025-07-01 14:26:20,977 - INFO - 成功上传 vat_0047.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0047.jpeg
+2025-07-01 14:26:20,980 - INFO - 已创建并验证 vat_0047.jpeg 的训练数据
+2025-07-01 14:26:24,531 - INFO - 成功上传 vat_0010.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0010.jpeg
+2025-07-01 14:26:24,534 - INFO - 已创建并验证 vat_0010.jpeg 的训练数据
+2025-07-01 14:26:28,272 - INFO - 成功上传 vat_0030.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0030.jpeg
+2025-07-01 14:26:28,276 - INFO - 已创建并验证 vat_0030.jpeg 的训练数据
+2025-07-01 14:26:31,778 - INFO - 成功上传 vat_0026.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0026.jpeg
+2025-07-01 14:26:31,781 - INFO - 已创建并验证 vat_0026.jpeg 的训练数据
+2025-07-01 14:26:35,347 - INFO - 成功上传 vat_0017.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0017.jpeg
+2025-07-01 14:26:35,351 - INFO - 已创建并验证 vat_0017.jpeg 的训练数据
+2025-07-01 14:26:39,235 - INFO - 成功上传 vat_0040.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0040.jpeg
+2025-07-01 14:26:39,241 - INFO - 已创建并验证 vat_0040.jpeg 的训练数据
+2025-07-01 14:26:42,709 - INFO - 成功上传 vat_0001.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0001.jpeg
+2025-07-01 14:26:42,712 - INFO - 已创建并验证 vat_0001.jpeg 的训练数据
+2025-07-01 14:26:46,243 - INFO - 成功上传 vat_0021.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0021.jpeg
+2025-07-01 14:26:46,244 - INFO - 已创建并验证 vat_0021.jpeg 的训练数据
+2025-07-01 14:26:50,109 - INFO - 成功上传 vat_0037.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0037.jpeg
+2025-07-01 14:26:50,112 - INFO - 已创建并验证 vat_0037.jpeg 的训练数据
+2025-07-01 14:26:53,698 - INFO - 成功上传 vat_0036.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0036.jpeg
+2025-07-01 14:26:53,701 - INFO - 已创建并验证 vat_0036.jpeg 的训练数据
+2025-07-01 14:26:57,236 - INFO - 成功上传 vat_0020.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0020.jpeg
+2025-07-01 14:26:57,239 - INFO - 已创建并验证 vat_0020.jpeg 的训练数据
+2025-07-01 14:27:00,774 - INFO - 成功上传 vat_0041.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0041.jpeg
+2025-07-01 14:27:00,778 - INFO - 已创建并验证 vat_0041.jpeg 的训练数据
+2025-07-01 14:27:04,260 - INFO - 成功上传 vat_0016.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0016.jpeg
+2025-07-01 14:27:04,264 - INFO - 已创建并验证 vat_0016.jpeg 的训练数据
+2025-07-01 14:27:07,741 - INFO - 成功上传 vat_0003.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0003.jpeg
+2025-07-01 14:27:07,744 - INFO - 已创建并验证 vat_0003.jpeg 的训练数据
+2025-07-01 14:27:11,240 - INFO - 成功上传 vat_0042.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0042.jpeg
+2025-07-01 14:27:11,244 - INFO - 已创建并验证 vat_0042.jpeg 的训练数据
+2025-07-01 14:27:15,252 - INFO - 成功上传 vat_0015.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0015.jpeg
+2025-07-01 14:27:15,256 - INFO - 已创建并验证 vat_0015.jpeg 的训练数据
+2025-07-01 14:27:18,773 - INFO - 成功上传 vat_0039.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0039.jpeg
+2025-07-01 14:27:18,777 - INFO - 已创建并验证 vat_0039.jpeg 的训练数据
+2025-07-01 14:27:22,273 - INFO - 成功上传 vat_0019.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0019.jpeg
+2025-07-01 14:27:22,277 - INFO - 已创建并验证 vat_0019.jpeg 的训练数据
+2025-07-01 14:27:25,756 - INFO - 成功上传 vat_0035.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0035.jpeg
+2025-07-01 14:27:25,759 - INFO - 已创建并验证 vat_0035.jpeg 的训练数据
+2025-07-01 14:27:29,267 - INFO - 成功上传 vat_0023.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0023.jpeg
+2025-07-01 14:27:29,271 - INFO - 已创建并验证 vat_0023.jpeg 的训练数据
+2025-07-01 14:27:32,794 - INFO - 成功上传 vat_0022.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0022.jpeg
+2025-07-01 14:27:32,799 - INFO - 已创建并验证 vat_0022.jpeg 的训练数据
+2025-07-01 14:27:36,299 - INFO - 成功上传 vat_0034.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0034.jpeg
+2025-07-01 14:27:36,302 - INFO - 已创建并验证 vat_0034.jpeg 的训练数据
+2025-07-01 14:27:39,847 - INFO - 成功上传 vat_0018.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0018.jpeg
+2025-07-01 14:27:39,849 - INFO - 已创建并验证 vat_0018.jpeg 的训练数据
+2025-07-01 14:27:43,397 - INFO - 成功上传 vat_0038.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0038.jpeg
+2025-07-01 14:27:43,400 - INFO - 已创建并验证 vat_0038.jpeg 的训练数据
+2025-07-01 14:27:47,051 - INFO - 成功上传 vat_0014.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0014.jpeg
+2025-07-01 14:27:47,052 - INFO - 已创建并验证 vat_0014.jpeg 的训练数据
+2025-07-01 14:27:51,383 - INFO - 成功上传 vat_0043.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0043.jpeg
+2025-07-01 14:27:51,387 - INFO - 已创建并验证 vat_0043.jpeg 的训练数据
+2025-07-01 14:27:55,213 - INFO - 成功上传 vat_0002.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0002.jpeg
+2025-07-01 14:27:55,214 - INFO - 已创建并验证 vat_0002.jpeg 的训练数据
+2025-07-01 14:27:58,750 - INFO - 成功上传 vat_0009.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0009.jpeg
+2025-07-01 14:27:58,755 - INFO - 已创建并验证 vat_0009.jpeg 的训练数据
+2025-07-01 14:28:02,348 - INFO - 成功上传 vat_0048.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0048.jpeg
+2025-07-01 14:28:02,352 - INFO - 已创建并验证 vat_0048.jpeg 的训练数据
+2025-07-01 14:28:06,288 - INFO - 成功上传 vat_0033.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0033.jpeg
+2025-07-01 14:28:06,291 - INFO - 已创建并验证 vat_0033.jpeg 的训练数据
+2025-07-01 14:28:09,778 - INFO - 成功上传 vat_0025.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0025.jpeg
+2025-07-01 14:28:09,781 - INFO - 已创建并验证 vat_0025.jpeg 的训练数据
+2025-07-01 14:28:13,398 - INFO - 成功上传 vat_0005.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0005.jpeg
+2025-07-01 14:28:13,401 - INFO - 已创建并验证 vat_0005.jpeg 的训练数据
+2025-07-01 14:28:16,846 - INFO - 成功上传 vat_0044.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0044.jpeg
+2025-07-01 14:28:16,850 - INFO - 已创建并验证 vat_0044.jpeg 的训练数据
+2025-07-01 14:28:20,304 - INFO - 成功上传 vat_0013.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0013.jpeg
+2025-07-01 14:28:20,308 - INFO - 已创建并验证 vat_0013.jpeg 的训练数据
+2025-07-01 14:28:23,764 - INFO - 成功上传 vat_0029.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0029.jpeg
+2025-07-01 14:28:23,768 - INFO - 已创建并验证 vat_0029.jpeg 的训练数据
+2025-07-01 14:28:27,299 - INFO - 成功上传 vat_0028.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0028.jpeg
+2025-07-01 14:28:27,304 - INFO - 已创建并验证 vat_0028.jpeg 的训练数据
+2025-07-01 14:28:30,797 - INFO - 成功上传 vat_0012.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0012.jpeg
+2025-07-01 14:28:30,802 - INFO - 已创建并验证 vat_0012.jpeg 的训练数据
+2025-07-01 14:28:34,529 - INFO - 成功上传 vat_0045.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0045.jpeg
+2025-07-01 14:28:34,532 - INFO - 已创建并验证 vat_0045.jpeg 的训练数据
+2025-07-01 14:28:38,055 - INFO - 成功上传 vat_0004.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0004.jpeg
+2025-07-01 14:28:38,058 - INFO - 已创建并验证 vat_0004.jpeg 的训练数据
+2025-07-01 14:28:41,591 - INFO - 成功上传 vat_0024.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0024.jpeg
+2025-07-01 14:28:41,595 - INFO - 已创建并验证 vat_0024.jpeg 的训练数据
+2025-07-01 14:28:45,126 - INFO - 成功上传 vat_0032.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0032.jpeg
+2025-07-01 14:28:45,129 - INFO - 已创建并验证 vat_0032.jpeg 的训练数据
+2025-07-01 14:28:48,629 - INFO - 成功上传 vat_0049.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0049.jpeg
+2025-07-01 14:28:48,632 - INFO - 已创建并验证 vat_0049.jpeg 的训练数据
+2025-07-01 14:28:52,417 - INFO - 成功上传 vat_0008.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0008.jpeg
+2025-07-01 14:28:52,420 - INFO - 已创建并验证 vat_0008.jpeg 的训练数据
+2025-07-01 14:28:52,422 - INFO - 训练集数据准备完成。
+2025-07-01 14:28:52,422 - INFO - 训练集: 成功: 50, 失败: 0, 跳过: 0
+2025-07-01 14:28:52,423 - INFO - 训练集JSONL文件可在以下位置获取: ../data/bedrock-ft/train_data.jsonl
+2025-07-01 14:28:52,423 - INFO - 开始处理测试集...
+2025-07-01 14:28:52,425 - INFO - 成功从CSV读取 50 个有效条目 (过滤掉 0 个提取失败的条目)
+2025-07-01 14:28:55,908 - INFO - 成功上传 vat_0070.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0070.jpeg
+2025-07-01 14:28:55,911 - INFO - 已创建并验证 vat_0070.jpeg 的训练数据
+2025-07-01 14:28:59,422 - INFO - 成功上传 vat_0066.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0066.jpeg
+2025-07-01 14:28:59,426 - INFO - 已创建并验证 vat_0066.jpeg 的训练数据
+2025-07-01 14:29:03,336 - INFO - 成功上传 vat_0089.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0089.jpeg
+2025-07-01 14:29:03,340 - INFO - 已创建并验证 vat_0089.jpeg 的训练数据
+2025-07-01 14:29:06,888 - INFO - 成功上传 vat_0093.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0093.jpeg
+2025-07-01 14:29:06,890 - INFO - 已创建并验证 vat_0093.jpeg 的训练数据
+2025-07-01 14:29:10,398 - INFO - 成功上传 vat_0085.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0085.jpeg
+2025-07-01 14:29:10,401 - INFO - 已创建并验证 vat_0085.jpeg 的训练数据
+2025-07-01 14:29:14,021 - INFO - 成功上传 vat_0051.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0051.jpeg
+2025-07-01 14:29:14,025 - INFO - 已创建并验证 vat_0051.jpeg 的训练数据
+2025-07-01 14:29:17,498 - INFO - 成功上传 vat_0084.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0084.jpeg
+2025-07-01 14:29:17,501 - INFO - 已创建并验证 vat_0084.jpeg 的训练数据
+2025-07-01 14:29:20,980 - INFO - 成功上传 vat_0092.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0092.jpeg
+2025-07-01 14:29:20,983 - INFO - 已创建并验证 vat_0092.jpeg 的训练数据
+2025-07-01 14:29:24,574 - INFO - 成功上传 vat_0067.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0067.jpeg
+2025-07-01 14:29:24,577 - INFO - 已创建并验证 vat_0067.jpeg 的训练数据
+2025-07-01 14:29:28,094 - INFO - 成功上传 vat_0088.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0088.jpeg
+2025-07-01 14:29:28,098 - INFO - 已创建并验证 vat_0088.jpeg 的训练数据
+2025-07-01 14:29:31,546 - INFO - 成功上传 vat_0071.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0071.jpeg
+2025-07-01 14:29:31,550 - INFO - 已创建并验证 vat_0071.jpeg 的训练数据
+2025-07-01 14:29:35,015 - INFO - 成功上传 vat_0095.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0095.jpeg
+2025-07-01 14:29:35,019 - INFO - 已创建并验证 vat_0095.jpeg 的训练数据
+2025-07-01 14:29:38,501 - INFO - 成功上传 vat_0083.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0083.jpeg
+2025-07-01 14:29:38,505 - INFO - 已创建并验证 vat_0083.jpeg 的训练数据
+2025-07-01 14:29:42,153 - INFO - 成功上传 vat_0056.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0056.jpeg
+2025-07-01 14:29:42,155 - INFO - 已创建并验证 vat_0056.jpeg 的训练数据
+2025-07-01 14:29:46,128 - INFO - 成功上传 vat_0076.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0076.jpeg
+2025-07-01 14:29:46,130 - INFO - 已创建并验证 vat_0076.jpeg 的训练数据
+2025-07-01 14:29:49,600 - INFO - 成功上传 vat_0099.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0099.jpeg
+2025-07-01 14:29:49,602 - INFO - 已创建并验证 vat_0099.jpeg 的训练数据
+2025-07-01 14:29:53,088 - INFO - 成功上传 vat_0060.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0060.jpeg
+2025-07-01 14:29:53,089 - INFO - 已创建并验证 vat_0060.jpeg 的训练数据
+2025-07-01 14:29:56,608 - INFO - 成功上传 vat_0061.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0061.jpeg
+2025-07-01 14:29:56,611 - INFO - 已创建并验证 vat_0061.jpeg 的训练数据
+2025-07-01 14:30:00,174 - INFO - 成功上传 vat_0077.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0077.jpeg
+2025-07-01 14:30:00,178 - INFO - 已创建并验证 vat_0077.jpeg 的训练数据
+2025-07-01 14:30:04,546 - INFO - 成功上传 vat_0098.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0098.jpeg
+2025-07-01 14:30:04,567 - INFO - 已创建并验证 vat_0098.jpeg 的训练数据
+2025-07-01 14:30:08,100 - INFO - 成功上传 vat_0057.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0057.jpeg
+2025-07-01 14:30:08,103 - INFO - 已创建并验证 vat_0057.jpeg 的训练数据
+2025-07-01 14:30:11,662 - INFO - 成功上传 vat_0082.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0082.jpeg
+2025-07-01 14:30:11,666 - INFO - 已创建并验证 vat_0082.jpeg 的训练数据
+2025-07-01 14:30:15,150 - INFO - 成功上传 vat_0094.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0094.jpeg
+2025-07-01 14:30:15,152 - INFO - 已创建并验证 vat_0094.jpeg 的训练数据
+2025-07-01 14:30:18,728 - INFO - 成功上传 vat_0054.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0054.jpeg
+2025-07-01 14:30:18,732 - INFO - 已创建并验证 vat_0054.jpeg 的训练数据
+2025-07-01 14:30:22,207 - INFO - 成功上传 vat_0081.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0081.jpeg
+2025-07-01 14:30:22,209 - INFO - 已创建并验证 vat_0081.jpeg 的训练数据
+2025-07-01 14:30:26,188 - INFO - 成功上传 vat_0097.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0097.jpeg
+2025-07-01 14:30:26,191 - INFO - 已创建并验证 vat_0097.jpeg 的训练数据
+2025-07-01 14:30:30,210 - INFO - 成功上传 vat_0078.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0078.jpeg
+2025-07-01 14:30:30,214 - INFO - 已创建并验证 vat_0078.jpeg 的训练数据
+2025-07-01 14:30:33,692 - INFO - 成功上传 vat_0058.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0058.jpeg
+2025-07-01 14:30:33,695 - INFO - 已创建并验证 vat_0058.jpeg 的训练数据
+2025-07-01 14:30:37,890 - INFO - 成功上传 vat_0062.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0062.jpeg
+2025-07-01 14:30:37,894 - INFO - 已创建并验证 vat_0062.jpeg 的训练数据
+2025-07-01 14:30:41,042 - INFO - 成功上传 vat_0074.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0074.jpeg
+2025-07-01 14:30:41,045 - INFO - 已创建并验证 vat_0074.jpeg 的训练数据
+2025-07-01 14:30:44,552 - INFO - 成功上传 vat_0075.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0075.jpeg
+2025-07-01 14:30:44,556 - INFO - 已创建并验证 vat_0075.jpeg 的训练数据
+2025-07-01 14:30:48,403 - INFO - 成功上传 vat_0063.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0063.jpeg
+2025-07-01 14:30:48,407 - INFO - 已创建并验证 vat_0063.jpeg 的训练数据
+2025-07-01 14:30:51,948 - INFO - 成功上传 vat_0059.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0059.jpeg
+2025-07-01 14:30:51,952 - INFO - 已创建并验证 vat_0059.jpeg 的训练数据
+2025-07-01 14:30:55,431 - INFO - 成功上传 vat_0096.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0096.jpeg
+2025-07-01 14:30:55,436 - INFO - 已创建并验证 vat_0096.jpeg 的训练数据
+2025-07-01 14:30:58,996 - INFO - 成功上传 vat_0079.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0079.jpeg
+2025-07-01 14:30:59,000 - INFO - 已创建并验证 vat_0079.jpeg 的训练数据
+2025-07-01 14:31:02,695 - INFO - 成功上传 vat_0080.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0080.jpeg
+2025-07-01 14:31:02,699 - INFO - 已创建并验证 vat_0080.jpeg 的训练数据
+2025-07-01 14:31:06,313 - INFO - 成功上传 vat_0055.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0055.jpeg
+2025-07-01 14:31:06,318 - INFO - 已创建并验证 vat_0055.jpeg 的训练数据
+2025-07-01 14:31:09,925 - INFO - 成功上传 vat_0064.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0064.jpeg
+2025-07-01 14:31:09,928 - INFO - 已创建并验证 vat_0064.jpeg 的训练数据
+2025-07-01 14:31:13,509 - INFO - 成功上传 vat_0072.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0072.jpeg
+2025-07-01 14:31:13,512 - INFO - 已创建并验证 vat_0072.jpeg 的训练数据
+2025-07-01 14:31:17,098 - INFO - 成功上传 vat_0052.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0052.jpeg
+2025-07-01 14:31:17,100 - INFO - 已创建并验证 vat_0052.jpeg 的训练数据
+2025-07-01 14:31:20,582 - INFO - 成功上传 vat_0087.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0087.jpeg
+2025-07-01 14:31:20,586 - INFO - 已创建并验证 vat_0087.jpeg 的训练数据
+2025-07-01 14:31:24,479 - INFO - 成功上传 vat_0068.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0068.jpeg
+2025-07-01 14:31:24,483 - INFO - 已创建并验证 vat_0068.jpeg 的训练数据
+2025-07-01 14:31:28,053 - INFO - 成功上传 vat_0091.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0091.jpeg
+2025-07-01 14:31:28,056 - INFO - 已创建并验证 vat_0091.jpeg 的训练数据
+2025-07-01 14:31:31,506 - INFO - 成功上传 vat_0090.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0090.jpeg
+2025-07-01 14:31:31,510 - INFO - 已创建并验证 vat_0090.jpeg 的训练数据
+2025-07-01 14:31:35,041 - INFO - 成功上传 vat_0086.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0086.jpeg
+2025-07-01 14:31:35,044 - INFO - 已创建并验证 vat_0086.jpeg 的训练数据
+2025-07-01 14:31:38,888 - INFO - 成功上传 vat_0069.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0069.jpeg
+2025-07-01 14:31:38,892 - INFO - 已创建并验证 vat_0069.jpeg 的训练数据
+2025-07-01 14:31:42,488 - INFO - 成功上传 vat_0100.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0100.jpeg
+2025-07-01 14:31:42,491 - INFO - 已创建并验证 vat_0100.jpeg 的训练数据
+2025-07-01 14:31:46,083 - INFO - 成功上传 vat_0053.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0053.jpeg
+2025-07-01 14:31:46,085 - INFO - 已创建并验证 vat_0053.jpeg 的训练数据
+2025-07-01 14:31:49,540 - INFO - 成功上传 vat_0073.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0073.jpeg
+2025-07-01 14:31:49,546 - INFO - 已创建并验证 vat_0073.jpeg 的训练数据
+2025-07-01 14:31:53,146 - INFO - 成功上传 vat_0065.jpeg 到S3: s3://aigcdemo.plaza.red/nova-ft/images/vat_0065.jpeg
+2025-07-01 14:31:53,151 - INFO - 已创建并验证 vat_0065.jpeg 的训练数据
+2025-07-01 14:31:53,152 - INFO - 测试集数据准备完成。
+2025-07-01 14:31:53,152 - INFO - 测试集: 成功: 50, 失败: 0, 跳过: 0
+2025-07-01 14:31:53,152 - INFO - 测试集JSONL文件可在以下位置获取: ../data/bedrock-ft/test_data.jsonl
+2025-07-01 14:31:53,152 - INFO - 所有数据处理完成。
